@@ -10,6 +10,7 @@ brew "neovim"
 brew "tmux"
 brew "anyenv"
 brew "mas"
+brew "exa"
 
 cask "google-chrome"
 cask "firefox"
