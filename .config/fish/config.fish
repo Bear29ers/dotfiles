@@ -11,6 +11,7 @@ set -g theme_hostname always
 alias g git
 command -qv nvim && alias vim nvim
 command -qv nvim && alias vi nvim
+alias ws "open -a webstorm"
 
 set -gx EDITOR nvim
 
