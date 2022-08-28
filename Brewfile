@@ -11,6 +11,8 @@ brew "tmux"
 brew "anyenv"
 brew "mas"
 brew "exa"
+brew "peco"
+brew "ghq"
 
 cask "google-chrome"
 cask "firefox"
