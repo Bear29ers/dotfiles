@@ -21,3 +21,10 @@ set -g tide_git_upstream_color 282C34
 set -g tide_pwd_bg_color 56b6C2
 set -g tide_pwd_color_anchors DCDFE4
 set -g tide_pwd_color_dirs DCDFE4
+set -g tide_time_bg_color DCDFE4
+set -g tide_time_color 282C34
+set -g tide_status_bg_color 282C34
+set -g tide_status_bg_color_failure E45649
+set -g tide_status_color 50A14F
+set -g tide_cmd_duration_bg_color C678DD
+set -g tide_cmd_duration_color DCDFE4
