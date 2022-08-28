@@ -41,7 +41,9 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Fish
 fishd.*
+.config/fish/fish_variables
 
 # Vim
 Session.vim
