@@ -37,7 +37,7 @@
   open = "!hub browse"
   type = cat-file -t
   dump = cat-file -p
-  cache = rm -r --cached -f
+  cache = rm -r --cached . -f
 
 [hub]
   protocol = https
