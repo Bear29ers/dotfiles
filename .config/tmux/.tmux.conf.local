@@ -44,18 +44,18 @@ tmux_conf_new_session_prompt=false
 # see https://github.com/termstandard/colors
 tmux_conf_24b_colour=true
 set -g default-terminal "screen-256color"
+set -ga terminal-overrides ",xterm-256color:Tc"
 
 # default theme
-tmux_conf_theme_colour_1="#383A42"    # One half light black
-tmux_conf_theme_colour_2="#44475A"    # Dracula gray
-#tmux_conf_theme_colour_3="#303030"    # Dracula gray
-tmux_conf_theme_colour_3="#383A42"    # One half light black
-tmux_conf_theme_colour_4="#8BE9FD"    # Dracula cyan
-tmux_conf_theme_colour_5="#F1FA8C"    # Dracula yellow
+tmux_conf_theme_colour_1="#080808"    # dark gray
+tmux_conf_theme_colour_2="#303030"    # gray
+tmux_conf_theme_colour_3="#8a8a8a"    # light gray
+tmux_conf_theme_colour_4="#00afff"    # light blue
+tmux_conf_theme_colour_5="#ffff00"    # yellow
 tmux_conf_theme_colour_6="#080808"    # dark gray
 tmux_conf_theme_colour_7="#e4e4e4"    # white
 tmux_conf_theme_colour_8="#080808"    # dark gray
-tmux_conf_theme_colour_9="#F1FA8C"    # Dracula yellow
+tmux_conf_theme_colour_9="#ffff00"    # yellow
 tmux_conf_theme_colour_10="#ff00af"   # pink
 tmux_conf_theme_colour_11="#5fff00"   # green
 tmux_conf_theme_colour_12="#8a8a8a"   # light gray
@@ -65,11 +65,14 @@ tmux_conf_theme_colour_15="#080808"   # dark gray
 tmux_conf_theme_colour_16="#d70000"   # red
 tmux_conf_theme_colour_17="#e4e4e4"   # white
 
-# Dracula Colors
+# Dracula Colors（ANSI 256）
+one_half_dark="#383a42"
 dracula_background_color="#282a36"
 dracula_current_line_color="#44475a"
 dracula_foreground_color="#f8f8f2"
 dracula_comment_color="#6272a4"
+dracula_police_blue="#3C5464"
+dracula_blue="#14548F"
 dracula_cyan="#8be9fd"
 dracula_green="#50fa7b"
 dracula_orange="#ffb86c"
@@ -77,6 +80,22 @@ dracula_pink="#ff79c6"
 dracula_purple="#bd93f9"
 dracula_red="#ff5555"
 dracula_yellow="#f1fa8c"
+status_background_color="#3b3c36"
+
+#dracula_background_color="#282A36"
+#dracula_current_line_color="#44475A"
+#dracula_foreground_color="#F8F8F2"
+#dracula_comment_color="#6272A4"
+#dracula_police_blue="#3C5464"
+#dracula_blue="#14548F"
+#dracula_cyan="#8BE9FD"
+#dracula_green="#50FA7B"
+#dracula_orange="#FFB86C"
+#dracula_pink="#FF79C6"
+#dracula_purple="#BD93F9"
+#dracula_red="#FF5555"
+#dracula_yellow="#F1FA8C"
+#dracula_white="#C4D2D9"
 
 # window style
 tmux_conf_theme_window_fg="default"
@@ -88,7 +107,7 @@ tmux_conf_theme_window_bg="default"
 tmux_conf_theme_highlight_focused_pane=true
 
 # focused pane colours:
-tmux_conf_theme_focused_pane_bg="$tmux_conf_theme_colour_2"
+tmux_conf_theme_focused_pane_bg="$dracula_background_color"
 
 # pane border style, possible values are:
 #   - thin (default)
@@ -96,31 +115,31 @@ tmux_conf_theme_focused_pane_bg="$tmux_conf_theme_colour_2"
 tmux_conf_theme_pane_border_style=thin
 
 # pane borders colours:
-tmux_conf_theme_pane_border="$tmux_conf_theme_colour_2"
-tmux_conf_theme_pane_active_border="$tmux_conf_theme_colour_4"
+tmux_conf_theme_pane_border="$dracula_blue"
+tmux_conf_theme_pane_active_border="$dracula_cyan"
 
 # pane indicator colours (when you hit <prefix> + q)
-tmux_conf_theme_pane_indicator="$tmux_conf_theme_colour_4"
-tmux_conf_theme_pane_active_indicator="$tmux_conf_theme_colour_4"
+tmux_conf_theme_pane_indicator="$dracula_blue"
+tmux_conf_theme_pane_active_indicator="$dracula_cyan"
 
 # status line style
-tmux_conf_theme_message_fg="$tmux_conf_theme_colour_1"
-tmux_conf_theme_message_bg="$tmux_conf_theme_colour_5"
+tmux_conf_theme_message_fg="$dracula_background_color"
+tmux_conf_theme_message_bg="$dracula_background_color"
 tmux_conf_theme_message_attr="bold"
 
 # status line command style (<prefix> : Escape)
-tmux_conf_theme_message_command_fg="$tmux_conf_theme_colour_5"
-tmux_conf_theme_message_command_bg="$tmux_conf_theme_colour_1"
+tmux_conf_theme_message_command_fg="$dracula_background_color"
+tmux_conf_theme_message_command_bg="$dracula_background_color"
 tmux_conf_theme_message_command_attr="bold"
 
 # window modes style
-tmux_conf_theme_mode_fg="$tmux_conf_theme_colour_1"
-tmux_conf_theme_mode_bg="$tmux_conf_theme_colour_5"
+tmux_conf_theme_mode_fg="$dracula_background_color"
+tmux_conf_theme_mode_bg="$dracula_background_color"
 tmux_conf_theme_mode_attr="bold"
 
 # status line style
-tmux_conf_theme_status_fg="$tmux_conf_theme_colour_3"
-tmux_conf_theme_status_bg="$tmux_conf_theme_colour_"
+tmux_conf_theme_status_fg="$dracula_foreground_color"
+tmux_conf_theme_status_bg="$status_background_color"
 tmux_conf_theme_status_attr="none"
 
 # terminal title
@@ -133,7 +152,7 @@ tmux_conf_theme_status_attr="none"
 #     - #{hostname_full_ssh}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_terminal_title="#{username} 🐠 #S 🚪 #I #W"
+tmux_conf_theme_terminal_title="#{username} 📚 #S 🚪 #I #W"
 
 # window status style
 #   - built-in variables are:
@@ -145,11 +164,15 @@ tmux_conf_theme_terminal_title="#{username} 🐠 #S 🚪 #I #W"
 #     - #{hostname_full_ssh}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_window_status_fg="$tmux_conf_theme_colour_3"
-tmux_conf_theme_window_status_bg="$tmux_conf_theme_colour_1"
+tmux_conf_theme_window_status_fg="$dracula_foreground_color"
+tmux_conf_theme_window_status_bg="$status_background_color"
 tmux_conf_theme_window_status_attr="none"
-#tmux_conf_theme_window_status_format="#I #W"
 tmux_conf_theme_window_status_format="#I #W#{?window_bell_flag,🔔,}#{?window_zoomed_flag,🔍,}"
+
+# window last status style
+tmux_conf_theme_window_status_last_fg="$dracula_cyan"
+tmux_conf_theme_window_status_last_bg="$status_background_color"
+tmux_conf_theme_window_status_last_attr="bold"
 
 # window current status style
 #   - built-in variables are:
@@ -161,11 +184,10 @@ tmux_conf_theme_window_status_format="#I #W#{?window_bell_flag,🔔,}#{?window_z
 #     - #{hostname_full_ssh}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_window_status_current_fg="$tmux_conf_theme_colour_1"
-tmux_conf_theme_window_status_current_bg="$tmux_conf_theme_colour_4"
+tmux_conf_theme_window_status_current_fg="$one_half_dark"
+tmux_conf_theme_window_status_current_bg="$dracula_cyan"
 tmux_conf_theme_window_status_current_attr="bold"
-tmux_conf_theme_window_status_current_format="#I #W"
-#tmux_conf_theme_window_status_current_format="#I #W#{?window_zoomed_flag,🔍,}"
+tmux_conf_theme_window_status_current_format="#I #W#{?window_zoomed_flag,🔍,}"
 
 # window activity status style
 tmux_conf_theme_window_status_activity_fg="default"
@@ -177,20 +199,11 @@ tmux_conf_theme_window_status_bell_fg="$tmux_conf_theme_colour_5"
 tmux_conf_theme_window_status_bell_bg="default"
 tmux_conf_theme_window_status_bell_attr="blink,bold"
 
-# window last status style
-tmux_conf_theme_window_status_last_fg="$tmux_conf_theme_colour_4"
-tmux_conf_theme_window_status_last_bg="$tmux_conf_theme_colour_2"
-tmux_conf_theme_window_status_last_attr="none"
-
 # status left/right sections separators
-tmux_conf_theme_left_separator_main=""
-tmux_conf_theme_left_separator_sub="|"
-tmux_conf_theme_right_separator_main=""
-tmux_conf_theme_right_separator_sub="|"
-#tmux_conf_theme_left_separator_main='\uE0B0'  # /!\ you don't need to install Powerline
-#tmux_conf_theme_left_separator_sub='\uE0B1'   #   you only need fonts patched with
-#tmux_conf_theme_right_separator_main='\uE0B2' #   Powerline symbols or the standalone
-#tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see README.md
+tmux_conf_theme_left_separator_main='\uE0B0'  # /!\ you don't need to install Powerline
+tmux_conf_theme_left_separator_sub='\uE0B1'   #   you only need fonts patched with
+tmux_conf_theme_right_separator_main='\uE0B2' #   Powerline symbols or the standalone
+tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see README.md
 
 # status left/right content:
 #   - separate main sections with "|"
@@ -219,12 +232,12 @@ tmux_conf_theme_right_separator_sub="|"
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
+tmux_conf_theme_status_left=" #{username}#{root} | 📚 #S "
+tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | #{hostname} "
 
 # status left style
-tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_1,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
-tmux_conf_theme_status_left_bg="$dracula_yellow,$tmux_conf_theme_colour_10,$tmux_conf_theme_colour_11"
+tmux_conf_theme_status_left_fg="$dracula_foreground_color,$one_half_dark"
+tmux_conf_theme_status_left_bg="$dracula_red,$dracula_yellow"
 tmux_conf_theme_status_left_attr="bold,none,none"
 
 # status right style
@@ -293,14 +306,12 @@ tmux_conf_battery_vbar_palette="gradient"
 #tmux_conf_battery_vbar_palette="#d70000,#ff5f00,#5fff00"  # red, orange, green
 
 # symbols used to indicate whether battery is charging or discharging
-tmux_conf_battery_status_charging="↑"       # U+2191
-tmux_conf_battery_status_discharging="↓"    # U+2193
-#tmux_conf_battery_status_charging="🔌"     # U+1F50C
-#tmux_conf_battery_status_discharging="🔋"  # U+1F50B
+tmux_conf_battery_status_charging="🔌"     # U+1F50C
+tmux_conf_battery_status_discharging="🔋"  # U+1F50B
 
 # clock style (when you hit <prefix> + t)
 # you may want to use %I:%M %p in place of %R in tmux_conf_theme_status_right
-tmux_conf_theme_clock_colour="$tmux_conf_theme_colour_4"
+tmux_conf_theme_clock_colour="$dracula_purple"
 tmux_conf_theme_clock_style="24"
 
 
