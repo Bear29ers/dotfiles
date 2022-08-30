@@ -13,6 +13,8 @@ brew "mas"
 brew "exa"
 brew "peco"
 brew "ghq"
+brew "curl"
+brew "reattach-to-user-namespace"
 
 cask "google-chrome"
 cask "firefox"

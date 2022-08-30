@@ -43,8 +43,6 @@ tmux_conf_new_session_prompt=false
 # to 'truecolor' or '24bit' or '$ tput colors' answering '16777216'
 # see https://github.com/termstandard/colors
 tmux_conf_24b_colour=true
-set -g default-terminal "screen-256color"
-set -ga terminal-overrides ",xterm-256color:Tc"
 
 # default theme
 tmux_conf_theme_colour_1="#080808"    # dark gray
@@ -80,22 +78,8 @@ dracula_pink="#ff79c6"
 dracula_purple="#bd93f9"
 dracula_red="#ff5555"
 dracula_yellow="#f1fa8c"
-status_background_color="#3b3c36"
-
-#dracula_background_color="#282A36"
-#dracula_current_line_color="#44475A"
-#dracula_foreground_color="#F8F8F2"
-#dracula_comment_color="#6272A4"
-#dracula_police_blue="#3C5464"
-#dracula_blue="#14548F"
-#dracula_cyan="#8BE9FD"
-#dracula_green="#50FA7B"
-#dracula_orange="#FFB86C"
-#dracula_pink="#FF79C6"
-#dracula_purple="#BD93F9"
-#dracula_red="#FF5555"
-#dracula_yellow="#F1FA8C"
-#dracula_white="#C4D2D9"
+status_left_background_color="#3b3c36"
+status_right_background_color="#36454f"
 
 # window style
 tmux_conf_theme_window_fg="default"
@@ -139,7 +123,7 @@ tmux_conf_theme_mode_attr="bold"
 
 # status line style
 tmux_conf_theme_status_fg="$dracula_foreground_color"
-tmux_conf_theme_status_bg="$status_background_color"
+tmux_conf_theme_status_bg="$status_left_background_color"
 tmux_conf_theme_status_attr="none"
 
 # terminal title
@@ -165,13 +149,13 @@ tmux_conf_theme_terminal_title="#{username} 📚 #S 🚪 #I #W"
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_window_status_fg="$dracula_foreground_color"
-tmux_conf_theme_window_status_bg="$status_background_color"
+tmux_conf_theme_window_status_bg="$status_left_background_color"
 tmux_conf_theme_window_status_attr="none"
 tmux_conf_theme_window_status_format="#I #W#{?window_bell_flag,🔔,}#{?window_zoomed_flag,🔍,}"
 
 # window last status style
 tmux_conf_theme_window_status_last_fg="$dracula_cyan"
-tmux_conf_theme_window_status_last_bg="$status_background_color"
+tmux_conf_theme_window_status_last_bg="$status_left_background_color"
 tmux_conf_theme_window_status_last_attr="bold"
 
 # window current status style
@@ -233,17 +217,17 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left=" #{username}#{root} | 📚 #S "
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | #{hostname} "
+tmux_conf_theme_status_right=" #{prefix}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , #{weather}, %R , %d %b | 👆#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | #{hostname} "
 
 # status left style
 tmux_conf_theme_status_left_fg="$dracula_foreground_color,$one_half_dark"
 tmux_conf_theme_status_left_bg="$dracula_red,$dracula_yellow"
-tmux_conf_theme_status_left_attr="bold,none,none"
+tmux_conf_theme_status_left_attr="bold,bold,none"
 
 # status right style
-tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
-tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_16,$tmux_conf_theme_colour_17"
-tmux_conf_theme_status_right_attr="none,none,bold"
+tmux_conf_theme_status_right_fg="$dracula_foreground_color,$dracula_foreground_color,$dracula_foreground_color"
+tmux_conf_theme_status_right_bg="$status_right_background_color,$dracula_purple,$dracula_pink"
+tmux_conf_theme_status_right_attr="bold,bold,bold"
 
 # pairing indicator
 tmux_conf_theme_pairing="😀"                 # U+2687
@@ -296,7 +280,6 @@ tmux_conf_battery_bar_palette="gradient"
 #   - heat
 #   - "colour_low,colour_half,colour_full"
 tmux_conf_battery_hbar_palette="gradient"
-#tmux_conf_battery_hbar_palette="#d70000,#ff5f00,#5fff00"  # red, orange, green
 
 # battery vbar palette, possible values are:
 #   - gradient (default)
@@ -323,14 +306,14 @@ tmux_conf_theme_clock_style="24"
 #   - disabled
 # on macOS, this requires installing reattach-to-user-namespace, see README.md
 # on Linux, this requires xsel or xclip
-tmux_conf_copy_to_os_clipboard=false
+tmux_conf_copy_to_os_clipboard=true
 
 
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings
 
 # increase history size
-#set -g history-limit 10000
+set -g history-limit 10000
 
 # start with mouse mode enabled
 #set -g mouse on
@@ -345,13 +328,10 @@ tmux_conf_copy_to_os_clipboard=false
 # unbind C-a
 unbind C-b
 set -g prefix C-t
-bind C-a send-prefix
+bind C-t send-prefix
 
 # if you don't want Oh my tmux! to alter a binding, use #!important
 # bind v new-window -c #{pane_current_path} #!important
-
-# move status line to top
-#set -g status-position top
 
 
 # -- tpm -----------------------------------------------------------------------
@@ -411,9 +391,10 @@ tmux_conf_uninstall_plugins_on_reload=true
 #
 # # /!\ do not "uncomment" the functions: the leading "# " characters are needed
 #
-# weather() {                                         # see https://github.com/chubin/wttr.in#one-line-output
-#   curl -f -s -m 2 'wttr.in?format=3' || printf '\n' # /!\ make sure curl is installed
-#   sleep 900                                         # sleep for 15 minutes, throttle network requests whatever the value of status-interval
+# see https://github.com/chubin/wttr.in#one-line-output
+# weather() {
+#   curl -m 1 http://wttr.in/\?format="%l:+%c+%t%20\n"
+#   sleep 900
 # }
 #
 # online() {
