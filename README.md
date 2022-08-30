@@ -16,6 +16,7 @@ This dotfiles contains a variety of setting files.
 |-----|-----|
 | [Fish Shell](https://fishshell.com/) | Fish is a smart and user-friendly command lineshell for Linux, macOS, and the rest of the family. |
 | [Fisher](https://github.com/jorgebucaran/fisher) | A plugin manager for Fish—the friendly interactive shell. |
+| [tmux](https://github.com/tmux/tmux) | tmux is terminal multiplexer. |
 | [z](https://github.com/jethrokuan/z) | z is a port of z for the fish shell |
 | [exa](https://the.exa.website/) | A modern replacement for ls. |
 | [peco](https://github.com/peco/peco) | Simplistic interactive filtering tool |
