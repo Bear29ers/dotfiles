@@ -10,7 +10,7 @@ set -g theme_hostname always
 # Aliases
 alias g git
 command -qv nvim && alias vim nvim
-command -qv nvim && alias vi nvim
+alias vi nvim
 alias ws "open -a webstorm"
 alias c clear
 
