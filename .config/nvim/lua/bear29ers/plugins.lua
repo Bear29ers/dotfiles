@@ -11,4 +11,11 @@ packer.startup(function(use)
 
   use 'navarasu/onedark.nvim' -- Colorscheme
   use 'nvim-lualine/lualine.nvim' -- Statusline
+
+  use {
+    'nvim-treesitter/nvim-treesitter', -- Treesitter
+    run = function() require('nvim-treesitter.install').update { with_sync = true } end
+  }
+
+  use 'windwp/nvim-autopairs'
 end)

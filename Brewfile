@@ -15,6 +15,7 @@ brew "peco"
 brew "ghq"
 brew "curl"
 brew "reattach-to-user-namespace"
+brew "tree-sitter"
 
 cask "google-chrome"
 cask "firefox"
