@@ -16,6 +16,7 @@ brew "ghq"
 brew "curl"
 brew "reattach-to-user-namespace"
 brew "tree-sitter"
+brew "ripgrep"
 
 cask "google-chrome"
 cask "firefox"

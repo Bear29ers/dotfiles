@@ -17,6 +17,12 @@ packer.startup(function(use)
     run = function() require('nvim-treesitter.install').update { with_sync = true } end
   }
 
-  use 'windwp/nvim-autopairs'
-  use 'windwp/nvim-ts-autotag'
+  use 'nvim-lua/plenary.nvim' -- Lua Library
+  use 'nvim-telescope/telescope.nvim' -- Telescope
+  use 'nvim-telescope/telescope-file-browser.nvim' -- Telescope File Browser
+
+  use 'windwp/nvim-autopairs' -- Autopairs
+  use 'windwp/nvim-ts-autotag' -- Autotag
+
+  use 'kyazdani42/nvim-web-devicons' -- File Icons
 end)
