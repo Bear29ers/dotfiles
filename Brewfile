@@ -17,6 +17,8 @@ brew "curl"
 brew "reattach-to-user-namespace"
 brew "tree-sitter"
 brew "ripgrep"
+brew "lua-language-server"
+brew "ninja"
 
 cask "google-chrome"
 cask "firefox"
