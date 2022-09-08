@@ -33,5 +33,7 @@ packer.startup(function(use)
   use 'windwp/nvim-autopairs' -- Autopairs
   use 'windwp/nvim-ts-autotag' -- Autotag
 
+  use 'akinsho/nvim-bufferline.lua' -- Bufferline
+
   use 'kyazdani42/nvim-web-devicons' -- File Icons
 end)
