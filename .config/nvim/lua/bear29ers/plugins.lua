@@ -36,4 +36,7 @@ packer.startup(function(use)
   use 'akinsho/nvim-bufferline.lua' -- Bufferline
 
   use 'kyazdani42/nvim-web-devicons' -- File Icons
+
+  use 'lewis6991/gitsigns.nvim' -- Super fast git decorations
+  use 'dinhhuy258/git.nvim' -- Clone of the vim-fugitive
 end)
