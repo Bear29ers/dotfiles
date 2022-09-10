@@ -1,0 +1,13 @@
+# Docker Command Alias
+alias d-all 'cat ~/.config/fish/docker.fish | grep d | sed "s/=/      \t\= /"'
+alias d 'docker'
+alias di 'docker images'
+alias dp 'docker ps -a'
+alias dri 'docker rmi -f'
+alias de 'docker exec -it'
+alias dc 'docker compose'
+alias dc-b 'docker compose build --no-cache'
+alias dc-u 'docker compose up -d'
+alias dc-l 'docker compose logs -f'
+alias dc-d 'docker compose down'
+alias dc-dr 'docker compose down --rmi all --volumes --remove-orphans'

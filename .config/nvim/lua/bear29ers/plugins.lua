@@ -21,6 +21,9 @@ packer.startup(function(use)
   use 'glepnir/lspsaga.nvim' -- Built-in LSP UI
   use 'folke/lsp-colors.nvim' -- Create missing LSP diagnostics highlight
 
+  use 'williamboman/mason.nvim' -- Portable package manager for Neovim
+  use 'williamboman/mason-lspconfig.nvim' -- Extension to mason.nvim that makes it easier to use lspconfig with mason.nvim
+
   use {
     'nvim-treesitter/nvim-treesitter', -- Treesitter
     run = function() require('nvim-treesitter.install').update { with_sync = true } end
@@ -39,4 +42,7 @@ packer.startup(function(use)
 
   use 'lewis6991/gitsigns.nvim' -- Super fast git decorations
   use 'dinhhuy258/git.nvim' -- Clone of the vim-fugitive
+
+  use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+  use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
 end)

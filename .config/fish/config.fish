@@ -11,11 +11,17 @@ set -g theme_hostname always
 alias g git
 command -qv nvim && alias vim nvim
 alias vi nvim
-alias ws "open -a webstorm"
+alias ws 'open -a webstorm'
+alias dd 'open -a docker'
 alias c clear
 
+# Docker Aliases
+source ~/.config/fish/docker.fish
+
+# Editor
 set -gx EDITOR nvim
 
+# PATH
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
@@ -29,8 +35,8 @@ eval (anyenv init - | source)
 
 # exa
 if type -q exa
-  alias ll "exa -l -g --icons"
-  alias la "ll -a"
-  alias lt "ll --tree"
-  alias lat "la --tree"
+  alias ll 'exa -l -g --icons'
+  alias la 'll -a'
+  alias lt 'll --tree'
+  alias lat 'la --tree'
 end
