@@ -49,5 +49,6 @@ packer.startup(function(use)
     'iamcco/markdown-preview.nvim', -- Markdown Preview
     run = function() vim.fn["mkdp#util#install"]() end,
   })
-  use 'norcalli/nvim-colorizer.lua'
+  use 'norcalli/nvim-colorizer.lua' -- A high-performance color highlighter for Neovim
+  use 'lukas-reineke/indent-blankline.nvim' -- Indent Guides for Neovim
 end)

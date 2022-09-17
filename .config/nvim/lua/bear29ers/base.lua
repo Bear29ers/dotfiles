@@ -33,6 +33,8 @@ opt.wrap = false
 opt.laststatus = 2
 opt.cmdheight = 1
 opt.showcmd = true
+opt.list = true
+opt.listchars= 'tab:>-', 'space:⋅', 'trail:*', 'nbsp:+'
 
 -- Cursor
 opt.scrolloff = 15
