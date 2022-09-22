@@ -1,6 +1,8 @@
 local status, onedark = pcall(require, 'onedark')
 if (not status) then return end
 
+local colors = require('onedark.palette')
+
 onedark.setup {
   style = 'darker',
   transparent = true,
@@ -10,7 +12,9 @@ onedark.setup {
   },
 
   colors = {},
-  highlights = {}
+  highlights = {
+    Visual = { bg = colors.darker.light_grey }
+  }
 }
 
 onedark.load()
