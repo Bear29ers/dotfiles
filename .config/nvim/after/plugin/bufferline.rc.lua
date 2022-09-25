@@ -13,13 +13,13 @@ bufferline.setup({
     color_icons = true,
     diagnostics = 'nvim_lsp',
     -- Diagnostics indicator settings inside tabs
-    diagnostics_indicator = function(diagnostics_dict)
+    diagnostics_indicator = function(count, level, diagnostics_dict, context)
       local s = ' '
       for e, n in pairs(diagnostics_dict) do
         local sym = e == 'error' and ' '
           or e == 'warning' and ' '
           or (e == 'hint' and ' ' or '')
-        s = s .. sym .. n
+        s = s .. n .. sym
       end
       return s
     end,
