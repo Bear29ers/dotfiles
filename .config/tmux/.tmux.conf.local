@@ -47,13 +47,9 @@ tmux_conf_24b_colour=true
 # Bear29ers Twilight Colors
 onedark_background="#282C34"
 onedark_foreground="#dcdfe4"
-dracula_current_line_color="#44475a"
-dracula_comment_color="#6272a4"
-dracula_police_blue="#3C5464"
 onedark_blue="#61afef"
 onedark_cyan="#56b6c2"
 onedark_green="#98c379"
-dracula_orange="#ffb86c"
 onedark_magenta="#c678dd"
 onedark_red="#e06c75"
 onedark_yellow="#e5c07b"
@@ -196,7 +192,7 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left=" #{username}#{root} | 📚 #S "
-tmux_conf_theme_status_right=" #{prefix}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | 👆#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | #{hostname} "
+tmux_conf_theme_status_right=" #{prefix}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} | %R , %d %b | 👆#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
 
 # status left style
 tmux_conf_theme_status_left_fg="$onedark_foreground,$onedark_background"
