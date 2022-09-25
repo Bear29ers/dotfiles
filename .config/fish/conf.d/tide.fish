@@ -18,7 +18,7 @@ set -g tide_git_staged_color 282C34
 set -g tide_git_stash_color 282C34
 set -g tide_git_untracked_color 282C34
 set -g tide_git_upstream_color 282C34
-set -g tide_pwd_bg_color 61AFEF
+set -g tide_pwd_bg_color 6388B4
 set -g tide_pwd_color_anchors DCDFE4
 set -g tide_pwd_color_dirs DCDFE4
 set -g tide_time_bg_color DCDFE4
