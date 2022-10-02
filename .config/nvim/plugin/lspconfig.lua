@@ -34,15 +34,18 @@ mason_lsp.setup_handlers({ function(server)
       -- Mappings.
       -- See `:help vim.lsp.*` for documentation on any of the below functions
       local bufopts = { noremap=true, silent=true, buffer=bufnr }
-      vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+      vim.keymap.set('n', 'sh', '<cmd>Lspsaga show_line_diagnostics<CR>', bufopts)
+      vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>', bufopts)
+      vim.keymap.set('n', 'ga', '<cmd>Lspsaga code_action<CR>', bufopts)
+      vim.keymap.set('n', 'gd', '<cmd>Lspsaga peek_definition<CR>', bufopts)
+      vim.keymap.set('n', 'gn', '<cmd>Lspsaga rename<CR>', bufopts)
+      vim.keymap.set('n', '[e', '<cmd>Lspsaga diagnostic_jump_prev<CR>', bufopts)
+      vim.keymap.set('n', ']e', '<cmd>Lspsaga diagnostic_jump_next<CR>', bufopts)
       vim.keymap.set('n', 'gf', vim.lsp.buf.formatting, bufopts)
       vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
       vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
       vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
       vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, bufopts)
-      vim.keymap.set('n', 'gn', vim.lsp.buf.rename, bufopts)
-      vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, bufopts)
     end,
 
     -- Set up completion using nvim_cmp with LSP source
