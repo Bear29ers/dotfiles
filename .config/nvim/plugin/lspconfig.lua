@@ -19,7 +19,10 @@ mason_lsp.setup {
   ensure_installed = {
     'sumneko_lua',
     'tsserver',
-    'tailwindcss'
+    'html',
+    'tailwindcss',
+    'emmet_ls',
+    'dockerls'
   }
 }
 
@@ -34,6 +37,7 @@ mason_lsp.setup_handlers({ function(server)
       -- Mappings.
       -- See `:help vim.lsp.*` for documentation on any of the below functions
       local bufopts = { noremap=true, silent=true, buffer=bufnr }
+      vim.keymap.set('n', 'gh', '<cmd>Lspsaga lsp_finder<CR>', bufopts)
       vim.keymap.set('n', 'sh', '<cmd>Lspsaga show_line_diagnostics<CR>', bufopts)
       vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>', bufopts)
       vim.keymap.set('n', 'ga', '<cmd>Lspsaga code_action<CR>', bufopts)
