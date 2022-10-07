@@ -19,7 +19,9 @@ packer.startup(function(use)
   use 'neovim/nvim-lspconfig' -- LSP Config
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for built-in LSP
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
+  use 'hrsh7th/cmp-cmdline' -- nvim-cmp source for vim's cmdline
   use 'hrsh7th/nvim-cmp' -- A completion engine
+  use 'hrsh7th/cmp-vsnip' -- nvim-cmp source for vim-vsnip
   use 'L3MON4D3/LuaSnip' -- Snippet Engine for Neovim
   use 'glepnir/lspsaga.nvim' -- Built-in LSP UI
   use 'onsails/lspkind-nvim' -- VSCode-like Pictograms
