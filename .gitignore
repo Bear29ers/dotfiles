@@ -44,8 +44,6 @@ Thumbs.db
 # Fish
 fishd.*
 .config/fish/fish_variables
-_tide*.fish
-__z*.fish
 
 # Vim
 Session.vim
