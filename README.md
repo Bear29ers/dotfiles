@@ -2,6 +2,13 @@
 
 # My dotfiles
 
+<img width="100%" alt="dotfiles01" src="https://user-images.githubusercontent.com/39920490/197185639-6d9070cc-eb3d-454c-b2cd-f25911b55de2.png">
+<img width="100%" alt="dotfiles02" src="https://user-images.githubusercontent.com/39920490/197185802-c9713f94-f356-4c54-9838-0d0b76a854a8.png">
+<img width="100%" alt="dotfiles03" src="https://user-images.githubusercontent.com/39920490/197186171-f52c5a2e-37bf-42cd-aba3-1745fd027410.png">
+<br>
+<br>
+<br>
+
 ## Contents
 
 This dotfiles contains a variety of setting files.
