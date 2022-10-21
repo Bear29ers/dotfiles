@@ -20,6 +20,7 @@ mason_lsp.setup {
     'sumneko_lua',
     'tsserver',
     'html',
+    'css-lsp',
     'tailwindcss',
     'emmet_ls',
     'dockerls'
