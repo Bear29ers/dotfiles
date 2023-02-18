@@ -1,1 +1,88 @@
-{"path": "cz-conventional-changelog"}
+{
+    "path": "cz-emoji",
+    "config": {
+        "cz-emoji": {
+            "subjectMaxLength": 72,
+            "types": [
+                {
+                  "name": "feat",
+                  "code": "feat: :sparkles:",
+                  "emoji": "✨",
+                  "description": "A new feature"
+                },
+                {
+                  "name": "fix",
+                  "code": "fix: :bug:",
+                  "emoji": "🐛",
+                  "description": "A bug fix"
+                },
+                {
+                  "name": "wip",
+                  "code": "wip: :construction:",
+                  "emoji": "🚧",
+                  "description": "Work in progress"
+                },
+                {
+                  "name": "docs",
+                  "code": "docs: :books:",
+                  "emoji": "📚",
+                  "description": "Documentation change"
+                },
+                {
+                  "name": "style",
+                  "code": "style: :art:",
+                  "emoji": "🎨",
+                  "description": "Change style"
+                },
+                {
+                  "name": "chore",
+                  "code": "chore: :paperclip:",
+                  "emoji": "📎",
+                  "description": "A chore change"
+                },
+                {
+                  "name": "refactor",
+                  "code": "refactor: :bulb:",
+                  "emoji": "💡",
+                  "description": "A code refactoring change"
+                },
+                {
+                  "name": "remove",
+                  "code": "remove: :fire:",
+                  "emoji": "🔥",
+                  "description": "Remove unnecessary code"
+                },
+                {
+                  "name": "init",
+                  "code": "init: :seedling:",
+                  "emoji": "🌱",
+                  "description": "Initial commit"
+                },
+                {
+                  "name": "perf",
+                  "code": "perf: :rocket:",
+                  "emoji": "🚀",
+                  "description": "Improvement performance"
+                },
+                {
+                  "name": "test",
+                  "code": "test: :green_heart:",
+                  "emoji": "💚",
+                  "description": "Revise and improve test, ci"
+                },
+                {
+                  "name": "docker",
+                  "code": "docker: :whale:",
+                  "emoji": "🐳",
+                  "description": "Work about Docker"
+                },
+                {
+                  "name": "release",
+                  "code": "release :tada:",
+                  "emoji": "🎉",
+                  "description": "Release"
+                }
+            ]
+        }
+    }
+}
