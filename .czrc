@@ -6,7 +6,7 @@
             "types": [
                 {
                   "name": "feat",
-                  "code": "feat: :+1:",
+                  "code": "feat: :sparkles:",
                   "emoji": "✨",
                   "description": "A new feature"
                 },
@@ -53,6 +53,12 @@
                   "description": "Remove unnecessary code"
                 },
                 {
+                  "name": "init",
+                  "code": "init: :seedling:",
+                  "emoji": "🌱",
+                  "description": "Initial commit"
+                },
+                {
                   "name": "perf",
                   "code": "perf: :rocket:",
                   "emoji": "🚀",
@@ -63,6 +69,12 @@
                   "code": "test: :green_heart:",
                   "emoji": "💚",
                   "description": "Revise and improve test, ci"
+                },
+                {
+                  "name": "docker",
+                  "code": "docker: :whale:",
+                  "emoji": "🐳",
+                  "description": "Work about Docker"
                 },
                 {
                   "name": "release",
