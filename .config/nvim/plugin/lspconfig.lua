@@ -59,7 +59,7 @@ mason_lsp.setup_handlers({
 			end,
 
 			-- Set up completion using nvim_cmp with LSP source
-			capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+			capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
 		}
 		-- sumneko_lua
 		if server == "sumneko_lua" then
