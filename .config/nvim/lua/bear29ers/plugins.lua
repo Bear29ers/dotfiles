@@ -30,6 +30,7 @@ packer.startup(function(use)
 
 	use("williamboman/mason.nvim") -- Portable package manager for Neovim
 	use("williamboman/mason-lspconfig.nvim") -- Extension to mason.nvim that makes it easier to use lspconfig with mason.nvim
+	use("jay-babu/mason-null-ls.nvim") -- Bridges mason.nvim with the null-ls plugin
 
 	use("nvim-lua/plenary.nvim") -- Lua Library
 	use("nvim-telescope/telescope.nvim") -- Telescope
