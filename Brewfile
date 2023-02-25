@@ -20,6 +20,7 @@ brew "tree-sitter"
 brew "ripgrep"
 brew "lua-language-server"
 brew "ninja"
+brew "fsouza/prettierd/prettierd"
 
 cask "google-chrome"
 cask "firefox"
