@@ -18,19 +18,6 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 vim.keymap.set("n", "<space>l", vim.diagnostic.setloclist, opts)
 
--- LSP management
-mason_lsp.setup({
-	ensure_installed = {
-		"sumneko_lua",
-		"tsserver",
-		"html",
-		"cssls",
-		"tailwindcss",
-		"emmet_ls",
-		"dockerls",
-	},
-})
-
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 mason_lsp.setup_handlers({

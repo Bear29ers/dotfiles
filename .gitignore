@@ -55,3 +55,6 @@ Session.vim
 
 # Karabiner
 .config/karabiner/automatic_backups
+
+# Brewfile
+Brewfile.lock.json
