@@ -3,7 +3,7 @@
     "config": {
         "cz-emoji": {
             "subjectMaxLength": 72,
-            "skilQuestions": ["scope"],
+            "skipQuestions": ["scope"],
             "types": [
                 {
                   "name": "feat",

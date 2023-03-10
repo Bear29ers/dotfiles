@@ -30,7 +30,6 @@ packer.startup(function(use)
 
 	use("williamboman/mason.nvim") -- Portable package manager for Neovim
 	use("williamboman/mason-lspconfig.nvim") -- Extension to mason.nvim that makes it easier to use lspconfig with mason.nvim
-	use("jay-babu/mason-null-ls.nvim") -- Bridges mason.nvim with the null-ls plugin
 
 	use("nvim-lua/plenary.nvim") -- Lua Library
 	use("nvim-telescope/telescope.nvim") -- Telescope
@@ -47,7 +46,6 @@ packer.startup(function(use)
 	use("dinhhuy258/git.nvim") -- Clone of the vim-fugitive
 
 	use("jose-elias-alvarez/null-ls.nvim") -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-	use("MunifTanjim/prettier.nvim") -- Prettier plugin for Neovim's built-in LSP client
 
 	use("numToStr/Comment.nvim") -- Smart and powerful comment plugin for neov
 
