@@ -54,6 +54,12 @@
                   "description": "Remove unnecessary code"
                 },
                 {
+                  "name": "config",
+                  "code": "config: :gear:",
+                  "emoji": "⚙️",
+                  "description": "Configuration files change"
+                },
+                {
                   "name": "init",
                   "code": "init: :seedling:",
                   "emoji": "🌱",
