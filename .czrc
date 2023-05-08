@@ -3,7 +3,7 @@
     "config": {
         "cz-emoji": {
             "subjectMaxLength": 72,
-            "skilQuestions": ["scope"],
+            "skipQuestions": ["scope"],
             "types": [
                 {
                   "name": "feat",
@@ -52,6 +52,12 @@
                   "code": "remove: :fire:",
                   "emoji": "🔥",
                   "description": "Remove unnecessary code"
+                },
+                {
+                  "name": "config",
+                  "code": "config: :gear:",
+                  "emoji": "⚙️",
+                  "description": "Configuration files change"
                 },
                 {
                   "name": "init",
