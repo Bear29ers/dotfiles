@@ -14,6 +14,7 @@ alias vi nvim
 alias ws 'open -a webstorm'
 alias dd 'open -a docker'
 alias c clear
+alias gm 'gitmoji -c'
 
 # Docker Aliases
 source ~/.config/fish/docker.fish
