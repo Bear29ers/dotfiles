@@ -72,6 +72,18 @@
                   "description": "Initial commit"
                 },
                 {
+                  "name": "revert",
+                  "code": "revert: :rewind:",
+                  "emoji": "⏪",
+                  "description": "Revert changes"
+                },
+                {
+                  "name": "logs",
+                  "code": "logs: :loud_sound:",
+                  "emoji": "🔊",
+                  "description": "Add or Update logs"
+                },
+                {
                   "name": "perf",
                   "code": "perf: :rocket:",
                   "emoji": "🚀",
