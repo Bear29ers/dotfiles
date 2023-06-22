@@ -36,22 +36,28 @@
                   "description": "Change style"
                 },
                 {
-                  "name": "chore",
-                  "code": "chore: :paperclip:",
-                  "emoji": "📎",
-                  "description": "A chore change"
-                },
-                {
                   "name": "refactor",
                   "code": "refactor: :bulb:",
                   "emoji": "💡",
                   "description": "A code refactoring change"
                 },
                 {
+                  "name": "hotfix",
+                  "code": "hotfix: :ambulance:",
+                  "emoji": "🚑",
+                  "description": "Critical hotfix"
+                },
+                {
+                  "name": "chore",
+                  "code": "chore: :paperclip:",
+                  "emoji": "📎",
+                  "description": "A chore change"
+                },
+                {
                   "name": "remove",
                   "code": "remove: :fire:",
                   "emoji": "🔥",
-                  "description": "Remove unnecessary code"
+                  "description": "Remove unnecessary code or files"
                 },
                 {
                   "name": "config",
