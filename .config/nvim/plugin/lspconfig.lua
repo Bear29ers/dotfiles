@@ -60,9 +60,9 @@ nvim_lsp.lua_ls.setup {
         -- Make the server aware of Neovim runtime files
         library = vim.api.nvim_get_runtime_file("", true),
         checkThirdParty = false
-      },
-    },
-  },
+      }
+    }
+  }
 }
 
 local util = require 'lspconfig.util'
@@ -100,7 +100,12 @@ nvim_lsp.tailwindcss.setup {
 
 nvim_lsp.cssls.setup {
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
+  settings = {
+    css = { validate = true, lint = { unknownAtRules = 'ignore' } },
+    scss = { validate = true, lint = { unknownAtRules = 'ignore' } },
+    less = { validate = true, lint = { unknownAtRules = 'ignore' } }
+  }
 }
 
 nvim_lsp.emmet_ls.setup {
