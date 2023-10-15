@@ -96,6 +96,12 @@
                   "description": "Revise and improve test, ci"
                 },
                 {
+                  "name": "deps",
+                  "code": "deps: :package:",
+                  "emoji": "📦",
+                  "description": "Work on packages"
+                },
+                {
                   "name": "docker",
                   "code": "docker: :whale:",
                   "emoji": "🐳",
