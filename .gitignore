@@ -41,7 +41,9 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Fish
 fishd.*
+.config/fish/fish_variables
 
 # Vim
 Session.vim
@@ -51,9 +53,8 @@ Session.vim
 .vim/syntax/Dockerfile.vim
 .vim/snippets/
 
-# Fish local config
-.config/fish/config-local.fish
-.config/fish/fish_variables.x86_64
-
 # Karabiner
 .config/karabiner/automatic_backups
+
+# Brewfile
+Brewfile.lock.json
