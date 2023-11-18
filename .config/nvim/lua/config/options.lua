@@ -5,3 +5,9 @@ local opt = vim.opt
 
 opt.winbar = "%=%m %f" --  Winbar
 opt.relativenumber = false -- Relative line numbers
+opt.listchars = { -- Listchars
+  tab = ">-",
+  space = "⋅",
+  trail = "*",
+  nbsp = "+",
+}
