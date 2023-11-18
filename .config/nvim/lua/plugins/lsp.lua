@@ -31,6 +31,13 @@ return {
         format_kinds(entry, item) -- add icons
         return require("tailwindcss-colorizer-cmp").formatter(entry, item)
       end
+      local cmp = require("cmp")
+      -- borders to cmp window
+      local cmp_window = cmp.config.window
+      opts.window = {
+        completion = cmp_window.bordered(),
+        documentation = cmp_window.bordered(),
+      }
     end,
   },
 }
