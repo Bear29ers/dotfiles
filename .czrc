@@ -224,7 +224,7 @@
                 {
                     "emoji": "💡",
                     "code": ":bulb:",
-                    "description": "Documenting source code.",
+                    "description": "Adding or updating comments in source code.",
                     "name": "docs-code"
                 },
                 {
