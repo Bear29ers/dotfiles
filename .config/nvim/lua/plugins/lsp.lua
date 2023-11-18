@@ -1,5 +1,22 @@
 return {
   -- mason
+  {
+    "williamboman/mason.nvim",
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
+        "stylua",
+        "shfmt",
+        "tailwindcss-language-server",
+        "typescript-language-server",
+        "html-lsp",
+        "css-lsp",
+        "cssmodules-language-server",
+        "vue-language-server",
+        "emmet-language-server",
+        "sqlls",
+      })
+    end,
+  },
   -- lsp servers
   {
     "neovim/nvim-lspconfig",
