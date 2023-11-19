@@ -1,17 +1,8 @@
 return {
   -- add onedark
-  {
-    "navarasu/onedark.nvim",
-    opts = {
-      style = "darker",
-      transparent = true,
-      code_style = {
-        comments = "italic",
-      },
-    },
-  },
+  { "navarasu/onedark.nvim" },
 
-  -- Configure LazyVim to load gruvbox
+  -- Configure LazyVim to load onedark
   {
     "LazyVim/LazyVim",
     opts = {
