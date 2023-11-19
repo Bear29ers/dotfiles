@@ -6,6 +6,7 @@ tap "homebrew/cask-drivers"
 
 brew "fish"
 brew "git"
+brew "lazygit"
 brew "neovim"
 brew "tmux"
 brew "anyenv"
