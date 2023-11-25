@@ -300,6 +300,12 @@
                     "name": "seed"
                 },
                 {
+                    "emoji": "🥅",
+                    "code": "errors: :goal_net:",
+                    "description": "Handling or Catching errors",
+                    "name": "errors"
+                },
+                {
                     "emoji": "💫",
                     "code": "anime: :dizzy:",
                     "description": "Adding or updating animations and transitions.",
