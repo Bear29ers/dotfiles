@@ -7,182 +7,182 @@
             "types": [
                 {
                     "emoji": "🎨",
-                    "code": "format: :art:",
-                    "description": "Improving structure / format of the code.",
-                    "name": "style"
+                    "code": ":art: frmt:",
+                    "description": "Improve structure / format of the code.",
+                    "name": "format"
                 },
                 {
                     "emoji": "⚡️",
-                    "code": "improve: :zap:",
-                    "description": "Improving performance.",
-                    "name": "perf"
+                    "code": ":zap: improve:",
+                    "description": "Improve performance.",
+                    "name": "perform"
                 },
                 {
                     "emoji": "🔥",
-                    "code": "remove: :fire:",
-                    "description": "Removing code or files.",
-                    "name": "prune"
+                    "code": ":fire: remove:",
+                    "description": "Remove code or files.",
+                    "name": "remove"
                 },
                 {
                     "emoji": "🐛",
-                    "code": "fix-bug: :bug:",
-                    "description": "Fixing a bug.",
+                    "code": ":bug: fix:",
+                    "description": "Fix a bug.",
                     "name": "fix"
                 },
                 {
                     "emoji": "🚑",
-                    "code": "hotfix: :ambulance:",
+                    "code": ":ambulance: hotfix:",
                     "description": "Critical hotfix.",
                     "name": "quickfix"
                 },
                 {
                     "emoji": "✨",
-                    "code": "feature: :sparkles:",
-                    "description": "Introducing new features.",
+                    "code": ":sparkles: feature:",
+                    "description": "Introduce new features.",
                     "name": "feature"
                 },
                 {
                     "emoji": "📝",
-                    "code": "docs: :pencil:",
-                    "description": "Writing docs.",
-                    "name": "docs"
+                    "code": ":pencil: docs:",
+                    "description": "Add or update documentation.",
+                    "name": "document"
                 },
                 {
                     "emoji": "🚀",
-                    "code": "deploy: :rocket:",
-                    "description": "Deploying stuff.",
+                    "code": ":rocket: deploy:",
+                    "description": "Deploy stuff.",
                     "name": "deploy"
                 },
                 {
                     "emoji": "💄",
-                    "code": "ui: :lipstick:",
-                    "description": "Updating the UI and style files.",
+                    "code": ":lipstick: ui:",
+                    "description": "Add or update the UI and style files.",
                     "name": "ui"
                 },
                 {
                     "emoji": "🎉",
-                    "code": "init: :tada:",
-                    "description": "Initial commit.",
+                    "code": ":tada: init:",
+                    "description": "Begin a project.",
                     "name": "init"
                 },
                 {
                     "emoji": "✅",
-                    "code": "test: :white_check_mark:",
-                    "description": "Adding tests.",
+                    "code": ":white_check_mark: test:",
+                    "description": "Add, update, or pass tests.",
                     "name": "test"
                 },
                 {
                     "emoji": "🔒",
-                    "code": "security: :lock:",
-                    "description": "Fixing security issues.",
+                    "code": ":lock: security:",
+                    "description": "Fix security or privacy issues.",
                     "name": "security"
                 },
                 {
                     "emoji": "🔖",
-                    "code": "tags: :bookmark:",
-                    "description": "Releasing / Version tags.",
+                    "code": ":bookmark: tags:",
+                    "description": "Release / Version tags.",
                     "name": "release"
                 },
                 {
                     "emoji": "🚨",
-                    "code": "lint: :rotating_light:",
-                    "description": "Removing linter warnings.",
+                    "code": ":rotating_light: lint:",
+                    "description": "Fix compiler / linter warnings.",
                     "name": "lint"
                 },
                 {
                     "emoji": "🚧",
-                    "code": "wip: :construction:",
+                    "code": ":construction: wip:",
                     "description": "Work in progress.",
                     "name": "wip"
                 },
                 {
                     "emoji": "💚",
-                    "code": "fix-ci: :green_heart:",
-                    "description": "Fixing CI Build.",
+                    "code": ":green_heart: fix-ci:",
+                    "description": "Fix CI Build.",
                     "name": "fix-ci"
                 },
                 {
                     "emoji": "⬇️",
-                    "code": "downgrade: :arrow_down:",
-                    "description": "Downgrading dependencies.",
+                    "code": ":arrow_down: downgrade:",
+                    "description": "Downgrade dependencies.",
                     "name": "downgrade"
                 },
                 {
                     "emoji": "⬆️",
-                    "code": "upgrade: :arrow_up:",
-                    "description": "Upgrading dependencies.",
+                    "code": ":arrow_up: upgrade:",
+                    "description": "Upgrade dependencies.",
                     "name": "upgrade"
                 },
                 {
                     "emoji": "📌",
-                    "code": "pin: :pushpin:",
-                    "description": "Pinning dependencies to specific versions.",
-                    "name": "pushpin"
+                    "code": ":pushpin: pin:",
+                    "description": "Pin dependencies to specific versions.",
+                    "name": "pin"
                 },
                 {
                     "emoji": "👷",
-                    "code": "ci: :construction_worker:",
-                    "description": "Adding CI build system.",
+                    "code": ":construction_worker: ci:",
+                    "description": "Add or update CI build system.",
                     "name": "ci"
                 },
                 {
                     "emoji": "📈",
-                    "code": "analytics: :chart_with_upwards_trend:",
-                    "description": "Adding analytics or tracking code.",
+                    "code": ":chart_with_upwards_trend: analytics:",
+                    "description": "Add or update analytics or tracking code.",
                     "name": "analytics"
                 },
                 {
                     "emoji": "♻️",
                     "code": ":recycle: refactor:",
-                    "description": "Refactoring code.",
-                    "name": "refactoring"
+                    "description": "Refactor code.",
+                    "name": "refactor"
                 },
                 {
                     "emoji": "🐳",
-                    "code": "docker: :whale:",
+                    "code": ":whale: docker:",
                     "description": "Work about Docker.",
                     "name": "docker"
                 },
                 {
                     "emoji": "➕",
-                    "code": "dep-add: :heavy_plus_sign:",
-                    "description": "Adding a dependency.",
+                    "code": ":heavy_plus_sign: dep-add:",
+                    "description": "Add a dependency.",
                     "name": "dep-add"
                 },
                 {
                     "emoji": "➖",
-                    "code": "dep-rm: :heavy_minus_sign:",
-                    "description": "Removing a dependency.",
+                    "code": ":heavy_minus_sign: dep-rm:",
+                    "description": "Remove a dependency.",
                     "name": "dep-rm"
                 },
                 {
                     "emoji": "🔧",
-                    "code": "config: :wrench:",
-                    "description": "Changing configuration files.",
+                    "code": ":wrench: config:",
+                    "description": "Add or update configuration files.",
                     "name": "config"
                 },
                 {
                     "emoji": "🌐",
-                    "code": "i18n: :globe_with_meridians:",
+                    "code": ":globe_with_meridians: i18n:",
                     "description": "Internationalization and localization.",
                     "name": "i18n"
                 },
                 {
                     "emoji": "✏️",
-                    "code": "typo: :pencil2:",
-                    "description": "Fixing typos.",
+                    "code": ":pencil2: typo:",
+                    "description": "Fix typos.",
                     "name": "typo"
                 },
                 {
                     "emoji": "⏪",
-                    "code": "revert: :rewind:",
-                    "description": "Reverting changes.",
+                    "code": ":rewind: revert:",
+                    "description": "Revert changes.",
                     "name": "revert"
                 },
                 {
                     "emoji": "🔀",
-                    "code": "merge: :twisted_rightwards_arrows:",
-                    "description": "Merging branches.",
+                    "code": ":twisted_rightwards_arrows: merge:",
+                    "description": "Merge branches.",
                     "name": "merge"
                 },
                 {
