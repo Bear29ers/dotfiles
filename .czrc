@@ -187,175 +187,175 @@
                 },
                 {
                     "emoji": "📦",
-                    "code": "dep-up: :package:",
-                    "description": "Updating compiled files or packages.",
+                    "code": ":package: dep-up:",
+                    "description": "Add or update compiled files or packages.",
                     "name": "dep-up"
                 },
                 {
                     "emoji": "👽",
-                    "code": "api: :alien:",
-                    "description": "Updating code due to external API changes.",
+                    "code": ":alien: api:",
+                    "description": "Update code due to external API changes.",
                     "name": "compat"
                 },
                 {
                     "emoji": "🚚",
-                    "code": "mv: :truck:",
-                    "description": "Moving or renaming files.",
+                    "code": ":truck: mv:",
+                    "description": "Move or rename resources (e.g.: files, paths, routes).",
                     "name": "mv"
                 },
                 {
                     "emoji": "🍱",
-                    "code": "assets: :bento:",
-                    "description": "Adding or updating assets.",
+                    "code": ":bento: assets:",
+                    "description": "Add or update assets.",
                     "name": "assets"
                 },
                 {
                     "emoji": "👌",
-                    "code": "review: :ok_hand:",
-                    "description": "Updating code due to code review changes.",
+                    "code": ":ok_hand: review:",
+                    "description": "Update code due to code review changes.",
                     "name": "review"
                 },
                 {
                     "emoji": "💡",
-                    "code": "comments: :bulb:",
-                    "description": "Adding or updating comments in source code.",
+                    "code": ":bulb: comments:",
+                    "description": "Add or update comments in source code.",
                     "name": "comments"
                 },
                 {
                     "emoji": "💬",
-                    "code": "text: :speech_balloon:",
-                    "description": "Updating text and literals.",
+                    "code": ":speech_balloon: text:",
+                    "description": "Add or update text and literals.",
                     "name": "texts"
                 },
                 {
                     "emoji": "🗃",
-                    "code": "db: :card_file_box:",
-                    "description": "Performing database related changes.",
+                    "code": ":card_file_box: db:",
+                    "description": "Perform database related changes.",
                     "name": "db"
                 },
                 {
                     "emoji": "🔊",
-                    "code": "log-add: :loud_sound:",
-                    "description": "Adding logs.",
+                    "code": ":loud_sound: log-add:",
+                    "description": "Add or update logs.",
                     "name": "log-add"
                 },
                 {
                     "emoji": "🔇",
-                    "code": "log-rm: :mute:",
-                    "description": "Removing logs.",
+                    "code": ":mute: log-rm:",
+                    "description": "Remove logs.",
                     "name": "log-rm"
                 },
                 {
                     "emoji": "🚸",
-                    "code": "ux: :children_crossing:",
-                    "description": "Improving user experience / usability.",
+                    "code": ":children_crossing: ux:",
+                    "description": "Improve user experience / usability.",
                     "name": "ux"
                 },
                 {
                     "emoji": "📱",
-                    "code": "responsive: :iphone:",
-                    "description": "Working on responsive design.",
+                    "code": ":iphone: responsive:",
+                    "description": "Work on responsive design.",
                     "name": "iphone"
                 },
                 {
                     "emoji": "🤡",
-                    "code": "mock: :clown_face:",
-                    "description": "Mocking things.",
+                    "code": ":clown_face: mock:",
+                    "description": "Mock things.",
                     "name": "clown-face"
                 },
                 {
                     "emoji": "🙈",
-                    "code": "ignore: :see_no_evil:",
-                    "description": "Adding or updating a .gitignore file.",
+                    "code": ":see_no_evil: ignore:",
+                    "description": "Add or update a .gitignore file.",
                     "name": "see-no-evil"
                 },
                 {
                     "emoji": "📸",
-                    "code": "snapshots: :camera_flash:",
-                    "description": "Adding or updating snapshots.",
+                    "code": ":camera_flash: snapshots:",
+                    "description": "Add or update snapshots.",
                     "name": "camera-flash"
                 },
                 {
-                    "emoji": "⚗",
-                    "code": "experiment: :alembic:",
-                    "description": "Experimenting new things.",
+                    "emoji": "🔬",
+                    "code": ":microscope: experiment:",
+                    "description": "Perform expriments.",
                     "name": "experiment"
                 },
                 {
                     "emoji": "🔍",
-                    "code": "seo: :mag:",
-                    "description": "Improving SEO.",
+                    "code": ":mag: seo:",
+                    "description": "Improve SEO.",
                     "name": "seo"
                 },
                 {
                     "emoji": "🏷️",
-                    "code": "types: :label:",
-                    "description": "Adding or updating types (Flow, TypeScript).",
+                    "code": ":label: types:",
+                    "description": "Add or update types.",
                     "name": "types"
                 },
                 {
                     "emoji": "🌱",
-                    "code": "seed: :seedling:",
-                    "description": "Adding or updating seed files.",
+                    "code": ":seedling: seed:",
+                    "description": "Add or update seed files.",
                     "name": "seed"
                 },
                 {
                     "emoji": "🥅",
-                    "code": "errors: :goal_net:",
-                    "description": "Handling or Catching errors",
+                    "code": ":goal_net: errors:",
+                    "description": "Handle or catch errors",
                     "name": "errors"
                 },
                 {
                     "emoji": "💫",
-                    "code": "anime: :dizzy:",
-                    "description": "Adding or updating animations and transitions.",
+                    "code": ":dizzy: anime:",
+                    "description": "Add or update animations and transitions.",
                     "name": "animation"
                 },
                 {
                     "emoji": "🛂",
-                    "code": "auth: :passport_control:",
+                    "code": ":passport_control: auth:",
                     "description": "Work on code related to authorization, roles and permissions.",
                     "name": "passport-control"
                 },
                 {
                     "emoji": "🩹",
-                    "code": "fix-issue: :adhesive_bandage:",
+                    "code": ":adhesive_bandage: fix-issue:",
                     "description": "Simple fix for a non-critical issue.",
                     "name": "adhesive-bandage"
                 },
                 {
                     "emoji": "⚰️",
-                    "code": "dead: :coffin:",
+                    "code": ":coffin: dead:",
                     "description": "Remove dead code.",
                     "name": "coffin"
                 },
                 {
                     "emoji": "🧪",
-                    "code": "fail-test: :test_tube:",
+                    "code": ":test_tube: fail-test:",
                     "description": "Add a failing test.",
                     "name": "test-tube"
                 },
                 {
                     "emoji": "👔",
-                    "code": "logic: :necktie:",
+                    "code": ":necktie: logic:",
                     "description": "Add or update business logic",
                     "name": "necktie"
                 },
                 {
                     "emoji": "🩺",
-                    "code": "health: :stethoscope:",
+                    "code": ":stethoscope: health:",
                     "description": "Add or update healthcheck.",
                     "name": "stethoscope"
                 },
                 {
                     "emoji": "🧱",
-                    "code": "infra: :bricks:",
+                    "code": ":bricks: infra:",
                     "description": "Infrastructure related changes.",
                     "name": "bricks"
                 },
                 {
                     "emoji": "🧑‍💻",
-                    "code": "tech: :technologist:",
+                    "code": ":technologist: tech:",
                     "description": "Improve developer experience",
                     "name": "technologist"
                 }
