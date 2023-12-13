@@ -7,19 +7,19 @@
             "types": [
                 {
                     "emoji": "🎨",
-                    "code": ":art: frmt:",
+                    "code": ":art: fmt:",
                     "description": "Improve structure / format of the code.",
                     "name": "format"
                 },
                 {
                     "emoji": "⚡️",
-                    "code": ":zap: improve:",
+                    "code": ":zap: impr:",
                     "description": "Improve performance.",
                     "name": "perform"
                 },
                 {
                     "emoji": "🔥",
-                    "code": ":fire: remove:",
+                    "code": ":fire: rem:",
                     "description": "Remove code or files.",
                     "name": "remove"
                 },
@@ -31,13 +31,13 @@
                 },
                 {
                     "emoji": "🚑",
-                    "code": ":ambulance: hotfix:",
+                    "code": ":ambulance: hfix:",
                     "description": "Critical hotfix.",
-                    "name": "quickfix"
+                    "name": "hotfix"
                 },
                 {
                     "emoji": "✨",
-                    "code": ":sparkles: feature:",
+                    "code": ":sparkles: feat:",
                     "description": "Introduce new features.",
                     "name": "feature"
                 },
@@ -49,7 +49,7 @@
                 },
                 {
                     "emoji": "🚀",
-                    "code": ":rocket: deploy:",
+                    "code": ":rocket: depl:",
                     "description": "Deploy stuff.",
                     "name": "deploy"
                 },
@@ -73,7 +73,7 @@
                 },
                 {
                     "emoji": "🔒",
-                    "code": ":lock: security:",
+                    "code": ":lock: secu:",
                     "description": "Fix security or privacy issues.",
                     "name": "security"
                 },
@@ -96,20 +96,14 @@
                     "name": "wip"
                 },
                 {
-                    "emoji": "💚",
-                    "code": ":green_heart: fix-ci:",
-                    "description": "Fix CI Build.",
-                    "name": "fix-ci"
-                },
-                {
                     "emoji": "⬇️",
-                    "code": ":arrow_down: downgrade:",
+                    "code": ":arrow_down: dwg:",
                     "description": "Downgrade dependencies.",
                     "name": "downgrade"
                 },
                 {
                     "emoji": "⬆️",
-                    "code": ":arrow_up: upgrade:",
+                    "code": ":arrow_up: upg:",
                     "description": "Upgrade dependencies.",
                     "name": "upgrade"
                 },
@@ -127,19 +121,19 @@
                 },
                 {
                     "emoji": "📈",
-                    "code": ":chart_with_upwards_trend: analytics:",
+                    "code": ":chart_with_upwards_trend: nltx:",
                     "description": "Add or update analytics or tracking code.",
                     "name": "analytics"
                 },
                 {
                     "emoji": "♻️",
-                    "code": ":recycle: refactor:",
+                    "code": ":recycle: refa:",
                     "description": "Refactor code.",
                     "name": "refactor"
                 },
                 {
                     "emoji": "🐳",
-                    "code": ":whale: docker:",
+                    "code": ":whale: dock:",
                     "description": "Work about Docker.",
                     "name": "docker"
                 },
@@ -157,9 +151,9 @@
                 },
                 {
                     "emoji": "🔧",
-                    "code": ":wrench: config:",
+                    "code": ":wrench: conf:",
                     "description": "Add or update configuration files.",
-                    "name": "config"
+                    "name": "configuration"
                 },
                 {
                     "emoji": "🌐",
@@ -175,13 +169,13 @@
                 },
                 {
                     "emoji": "⏪",
-                    "code": ":rewind: revert:",
+                    "code": ":rewind: rvt:",
                     "description": "Revert changes.",
                     "name": "revert"
                 },
                 {
                     "emoji": "🔀",
-                    "code": ":twisted_rightwards_arrows: merge:",
+                    "code": ":twisted_rightwards_arrows: mrg:",
                     "description": "Merge branches.",
                     "name": "merge"
                 },
@@ -195,7 +189,7 @@
                     "emoji": "👽",
                     "code": ":alien: api:",
                     "description": "Update code due to external API changes.",
-                    "name": "compat"
+                    "name": "api"
                 },
                 {
                     "emoji": "🚚",
@@ -205,19 +199,19 @@
                 },
                 {
                     "emoji": "🍱",
-                    "code": ":bento: assets:",
+                    "code": ":bento: asst:",
                     "description": "Add or update assets.",
                     "name": "assets"
                 },
                 {
                     "emoji": "👌",
-                    "code": ":ok_hand: review:",
+                    "code": ":ok_hand: rev:",
                     "description": "Update code due to code review changes.",
                     "name": "review"
                 },
                 {
                     "emoji": "💡",
-                    "code": ":bulb: comments:",
+                    "code": ":bulb: cmt:",
                     "description": "Add or update comments in source code.",
                     "name": "comments"
                 },
@@ -253,31 +247,31 @@
                 },
                 {
                     "emoji": "📱",
-                    "code": ":iphone: responsive:",
+                    "code": ":iphone: resp:",
                     "description": "Work on responsive design.",
-                    "name": "iphone"
+                    "name": "responsive"
                 },
                 {
                     "emoji": "🤡",
                     "code": ":clown_face: mock:",
                     "description": "Mock things.",
-                    "name": "clown-face"
+                    "name": "mock"
                 },
                 {
                     "emoji": "🙈",
-                    "code": ":see_no_evil: ignore:",
+                    "code": ":see_no_evil: ign:",
                     "description": "Add or update a .gitignore file.",
-                    "name": "see-no-evil"
+                    "name": "ignore"
                 },
                 {
                     "emoji": "📸",
-                    "code": ":camera_flash: snapshots:",
+                    "code": ":camera_flash: snap:",
                     "description": "Add or update snapshots.",
-                    "name": "camera-flash"
+                    "name": "snapshots"
                 },
                 {
                     "emoji": "🔬",
-                    "code": ":microscope: experiment:",
+                    "code": ":microscope: expt:",
                     "description": "Perform expriments.",
                     "name": "experiment"
                 },
@@ -289,7 +283,7 @@
                 },
                 {
                     "emoji": "🏷️",
-                    "code": ":label: types:",
+                    "code": ":label: type:",
                     "description": "Add or update types.",
                     "name": "types"
                 },
@@ -301,13 +295,13 @@
                 },
                 {
                     "emoji": "🥅",
-                    "code": ":goal_net: errors:",
+                    "code": ":goal_net: err:",
                     "description": "Handle or catch errors",
                     "name": "errors"
                 },
                 {
                     "emoji": "💫",
-                    "code": ":dizzy: anime:",
+                    "code": ":dizzy: anm:",
                     "description": "Add or update animations and transitions.",
                     "name": "animation"
                 },
@@ -315,41 +309,41 @@
                     "emoji": "🛂",
                     "code": ":passport_control: auth:",
                     "description": "Work on code related to authorization, roles and permissions.",
-                    "name": "passport-control"
+                    "name": "authorization"
                 },
                 {
                     "emoji": "🩹",
-                    "code": ":adhesive_bandage: fix-issue:",
+                    "code": ":adhesive_bandage: ish:",
                     "description": "Simple fix for a non-critical issue.",
-                    "name": "adhesive-bandage"
+                    "name": "simple-fix"
                 },
                 {
                     "emoji": "⚰️",
                     "code": ":coffin: dead:",
                     "description": "Remove dead code.",
-                    "name": "coffin"
+                    "name": "dead"
                 },
                 {
                     "emoji": "🧪",
-                    "code": ":test_tube: fail-test:",
+                    "code": ":test_tube: fail:",
                     "description": "Add a failing test.",
-                    "name": "test-tube"
+                    "name": "fail-test"
                 },
                 {
                     "emoji": "👔",
-                    "code": ":necktie: logic:",
+                    "code": ":necktie: lgc:",
                     "description": "Add or update business logic",
-                    "name": "necktie"
+                    "name": "logic"
                 },
                 {
                     "emoji": "🩺",
-                    "code": ":stethoscope: health:",
+                    "code": ":stethoscope: hlth:",
                     "description": "Add or update healthcheck.",
-                    "name": "stethoscope"
+                    "name": "health"
                 },
                 {
                     "emoji": "🧱",
-                    "code": ":bricks: infra:",
+                    "code": ":bricks: infr:",
                     "description": "Infrastructure related changes.",
                     "name": "bricks"
                 },
