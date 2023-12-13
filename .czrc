@@ -133,7 +133,7 @@
                 },
                 {
                     "emoji": "♻️",
-                    "code": "refactor: :recycle:",
+                    "code": ":recycle: refactor:",
                     "description": "Refactoring code.",
                     "name": "refactoring"
                 },
