@@ -139,13 +139,13 @@
                 },
                 {
                     "emoji": "➕",
-                    "code": ":heavy_plus_sign: dep-add:",
+                    "code": ":heavy_plus_sign: dpad:",
                     "description": "Add a dependency.",
                     "name": "dep-add"
                 },
                 {
                     "emoji": "➖",
-                    "code": ":heavy_minus_sign: dep-rm:",
+                    "code": ":heavy_minus_sign: dprm:",
                     "description": "Remove a dependency.",
                     "name": "dep-rm"
                 },
@@ -181,7 +181,7 @@
                 },
                 {
                     "emoji": "📦",
-                    "code": ":package: dep-up:",
+                    "code": ":package: dpup:",
                     "description": "Add or update compiled files or packages.",
                     "name": "dep-up"
                 },
@@ -229,13 +229,13 @@
                 },
                 {
                     "emoji": "🔊",
-                    "code": ":loud_sound: log-add:",
+                    "code": ":loud_sound: lgad:",
                     "description": "Add or update logs.",
                     "name": "log-add"
                 },
                 {
                     "emoji": "🔇",
-                    "code": ":mute: log-rm:",
+                    "code": ":mute: lgrm:",
                     "description": "Remove logs.",
                     "name": "log-rm"
                 },
