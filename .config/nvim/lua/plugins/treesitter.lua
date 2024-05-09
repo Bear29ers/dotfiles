@@ -28,6 +28,7 @@ return {
       "markdown",
       "markdown_inline",
       "regex",
+      "ruby",
       "scss",
       "sql",
       "tsx",

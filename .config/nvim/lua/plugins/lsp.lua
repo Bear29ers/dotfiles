@@ -14,6 +14,7 @@ return {
         "vue-language-server",
         "emmet-language-server",
         "sqlls",
+        "solargraph",
       })
     end,
   },
