@@ -22,8 +22,10 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
-      servers = {
-        tailwindcss = {},
+      diagnostics = {
+        float = {
+          border = "rounded",
+        },
       },
     },
   },
