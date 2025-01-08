@@ -203,6 +203,7 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "eslint@4.8.0",
         "stylua",
         "shellcheck",
         "shfmt",

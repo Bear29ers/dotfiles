@@ -3,6 +3,7 @@
 -- Add any additional options here
 local opt = vim.opt
 
+opt.mouse = "a" -- Enable mouse mode
 opt.winbar = "%=%m %f" --  Winbar
 opt.relativenumber = false -- Relative line numbers
 opt.listchars = { -- Listchars
