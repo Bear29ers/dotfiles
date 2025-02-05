@@ -17,6 +17,7 @@ alias c clear
 
 # Docker Aliases
 source ~/.config/fish/docker.fish
+fish_add_path /Applications/Docker.app/Contents/Resources/bin
 
 # Editor
 set -gx EDITOR nvim
@@ -35,8 +36,8 @@ eval (anyenv init - | source)
 
 # exa
 if type -q exa
-  alias ll 'exa -l -g --icons'
-  alias la 'll -a'
-  alias lt 'll --tree'
-  alias lat 'la --tree'
+    alias ll 'exa -l -g --icons'
+    alias la 'll -a'
+    alias lt 'll --tree'
+    alias lat 'la --tree'
 end
