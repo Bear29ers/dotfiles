@@ -7,6 +7,7 @@ return {
       event = "InsertEnter",
       opts = {},
     },
+    "hrsh7th/nvim-cmp",
   },
   opts = {
     highlight = { enable = true },
@@ -39,9 +40,14 @@ return {
     },
   },
   config = function(_, opts)
-    local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-    local cmp = require("cmp")
-    cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+    require("nvim-treesitter.configs").setup(opts)
+
+    require("nvim-ts-autotag").setup({
+      enable = true,
+      enable_rename = true,
+      enable_close = true,
+      enable_close_on_slash = true,
+    })
 
     local autopairs = require("nvim-autopairs")
     autopairs.setup({
@@ -51,12 +57,10 @@ return {
       },
     })
 
-    require("nvim-treesitter.configs").setup(opts)
-    require("nvim-ts-autotag").setup({
-      enable = true,
-      enable_rename = true,
-      enable_close = true,
-      enable_close_on_slash = true,
-    })
+    pcall(function()
+      local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+      local cmp = require("cmp")
+      cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+    end)
   end,
 }
