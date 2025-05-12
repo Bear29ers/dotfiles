@@ -34,9 +34,9 @@ set -x PATH $HOME/.anyenv/bin $PATH
 eval (anyenv init - | source)
 
 # exa
-if type -q exa
-  alias ll 'exa -l -g --icons'
-  alias la 'll -a'
-  alias lt 'll --tree'
-  alias lat 'la --tree'
+if type -q eza
+    alias ll 'eza -l -g --icons'
+    alias la 'll -a'
+    alias lt 'll --tree'
+    alias lat 'la --tree'
 end
