@@ -36,6 +36,7 @@ return {
               useFlatConfig = nil,
             },
           },
+          solargraph = {},
         },
       },
       setup = {
