@@ -14,6 +14,8 @@ return {
         "vue-language-server",
         "emmet-language-server",
         "sqlls",
+        "erb-formatter",
+        "erb-lint",
       })
     end,
   },
