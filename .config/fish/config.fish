@@ -34,9 +34,16 @@ set -x PATH $HOME/.anyenv/bin $PATH
 eval (anyenv init - | source)
 
 # exa
-if type -q exa
-  alias ll 'exa -l -g --icons'
-  alias la 'll -a'
-  alias lt 'll --tree'
-  alias lat 'la --tree'
+if type -q eza
+    alias ll 'eza -l -g --icons'
+    alias la 'll -a'
+    alias lt 'll --tree'
+    alias lat 'la --tree'
 end
+
+# rbenv
+set -Ux RBENV_ROOT $HOME/.rbenv
+set -U fish_user_paths $RBENV_ROOT/bin $fish_user_paths
+
+# rbenv init
+status is-interactive; and source (rbenv init -|psub)
