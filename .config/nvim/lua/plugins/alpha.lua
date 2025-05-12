@@ -28,7 +28,7 @@ return {
                                   ██████        ██████                                  
                                     ████        ████                                    
 
-                                      [bear29ers]
+                                      [bear27leap]
     ]]
     opts.section.header.val = vim.split(logo, "\n", { trimempty = true })
     dashboard.section.buttons.val = {
