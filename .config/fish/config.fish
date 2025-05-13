@@ -42,8 +42,5 @@ if type -q eza
 end
 
 # rbenv
-set -Ux RBENV_ROOT $HOME/.rbenv
-set -U fish_user_paths $RBENV_ROOT/bin $fish_user_paths
-
-# rbenv init
-status is-interactive; and source (rbenv init -|psub)
+set -x PATH $HOME/.rbenv/bin $PATH
+status --is-interactive; and source (rbenv init -|psub)

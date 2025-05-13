@@ -14,10 +14,16 @@ return {
         "vue-language-server",
         "emmet-language-server",
         "sqlls",
-        "erb-formatter",
-        "erb-lint",
       })
     end,
+  },
+  -- mason-lspconfig
+  {
+    "williamboman/mason-lspconfig.nvim",
+    lazy = false,
+    opts = {
+      auto_install = true,
+    },
   },
   -- lsp servers
   {
@@ -36,7 +42,6 @@ return {
               useFlatConfig = nil,
             },
           },
-          solargraph = {},
         },
       },
       setup = {
@@ -58,6 +63,12 @@ return {
     opts = {
       user_default_options = {
         tailwind = true,
+        filetypes = {
+          "*",
+          "!lazy",
+          "erb",
+          "eruby",
+        },
       },
     },
   },
