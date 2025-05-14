@@ -35,6 +35,11 @@ return {
             },
           },
         },
+        ruby_lsp = {
+          mason = false,
+          enabled = true,
+          cmd = { "$HOME/.rbenv/shims/ruby-lsp" },
+        },
       },
       setup = {
         eslint = function()
