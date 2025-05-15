@@ -38,7 +38,7 @@ return {
         ruby_lsp = {
           mason = false,
           enabled = true,
-          cmd = { "$HOME/.rbenv/shims/ruby-lsp" },
+          cmd = { "/Users/523092/.rbenv/shims/ruby-lsp" },
         },
       },
       setup = {
