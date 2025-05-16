@@ -38,7 +38,11 @@ return {
         ruby_lsp = {
           mason = false,
           enabled = true,
-          cmd = { "$HOME/.rbenv/shims/ruby-lsp" },
+          cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv("GLLBAL_GEMFILE") },
+          cmd = { "/Users/bear29ers/.rbenv/shims/ruby-lsp" },
+          root_dir = function()
+            return vim.lood.cwd()
+          end,
         },
       },
       setup = {
