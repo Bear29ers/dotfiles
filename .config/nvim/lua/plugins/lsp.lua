@@ -38,12 +38,18 @@ return {
         ruby_lsp = {
           mason = false,
           enabled = true,
-          cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv("GLLBAL_GEMFILE") },
-          cmd = { "/Users/bear29ers/.rbenv/shims/ruby-lsp" },
+          cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv("GLOBAL_GEMFILE") },
+          cmd = { "/Users/523092/.rbenv/shims/ruby-lsp" },
           filetypes = { "ruby", "eruby" },
           root_dir = function()
             return vim.loop.cwd()
           end,
+        },
+        rubocop = {
+          mason = false,
+          enabled = true,
+          cmd = { "docker", "compose", "exec", "-i", "app", "rubocop", "--config", ".rubocop.yml", "--lsp" },
+          filetypes = { "ruby", "eruby" },
         },
       },
       setup = {
