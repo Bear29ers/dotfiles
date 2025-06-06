@@ -4,14 +4,8 @@
 
 local map = vim.keymap.set
 
-local uname = vim.uv.os_name()
-print(uname.sysname)
-
--- for MacOS
-if uname.sysname == "Darwin" then
-  -- Resize window using Alt + arrow keys
-  map("n", "<M-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
-  map("n", "<M-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
-  map("n", "<M-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
-  map("n", "<M-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
-end
+-- Resize window using Alt + arrow keys
+map("n", "<M-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
+map("n", "<M-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
+map("n", "<M-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
+map("n", "<M-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
