@@ -39,7 +39,7 @@ return {
           mason = false,
           enabled = true,
           cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv("GLLBAL_GEMFILE") },
-          cmd = { "/Users/bear29ers/.rbenv/shims/ruby-lsp" },
+          cmd = { os.getenv("RUBY_LSP_PATH") or vim.fn.expand("~/.rbenv/shims/ruby-lsp") },
           filetypes = { "ruby", "eruby" },
           root_dir = function()
             return vim.loop.cwd()

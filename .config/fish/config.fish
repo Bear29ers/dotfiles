@@ -47,3 +47,6 @@ set -U fish_user_paths $RBENV_ROOT/bin $fish_user_paths
 
 # rbenv init
 status is-interactive; and source (rbenv init -|psub)
+
+# ruby-lsp path
+set -x RUBY_LSP_PATH $HOME/.rbenv/shims/ruby-lsp
