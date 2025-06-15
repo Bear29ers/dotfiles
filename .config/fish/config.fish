@@ -50,3 +50,6 @@ status is-interactive; and source (rbenv init -|psub)
 
 # ruby-lsp path
 set -x RUBY_LSP_PATH $HOME/.rbenv/shims/ruby-lsp
+
+# copilot paid plan
+set -gx COPILOT_PAID_PLAN true
