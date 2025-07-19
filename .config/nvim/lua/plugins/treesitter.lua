@@ -1,16 +1,6 @@
 return {
   {
-
     "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      "windwp/nvim-ts-autotag",
-      {
-        "windwp/nvim-autopairs",
-        event = "InsertEnter",
-        opts = {},
-      },
-      "hrsh7th/nvim-cmp",
-    },
     opts = {
       highlight = { enable = true },
       indent = { enable = true },
@@ -41,16 +31,23 @@ return {
         "yaml",
       },
     },
-    config = function(_, opts)
-      require("nvim-treesitter.configs").setup(opts)
-
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    config = function()
       require("nvim-ts-autotag").setup({
         enable = true,
         enable_rename = true,
         enable_close = true,
         enable_close_on_slash = true,
       })
-
+    end,
+  },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    dependencies = { "hrsh7th/nvim-cmp" },
+    config = function()
       local autopairs = require("nvim-autopairs")
       autopairs.setup({
         check_ts = true,
@@ -59,11 +56,13 @@ return {
         },
       })
 
-      pcall(function()
-        local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-        local cmp = require("cmp")
-        cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
-      end)
+      local cmp_autopairs_ok, cmp_autopairs = pcall(require, "nvim-autopairs.completion.cmp")
+      if cmp_autopairs_ok then
+        local cmp_ok, cmp = pcall(require, "cmp")
+        if cmp_ok then
+          cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+        end
+      end
     end,
   },
   {

@@ -52,4 +52,4 @@ status is-interactive; and source (rbenv init -|psub)
 set -x RUBY_LSP_PATH $HOME/.rbenv/shims/ruby-lsp
 
 # copilot paid plan
-set -gx COPILOT_PAID_PLAN true
+set -gx COPILOT_PAID_PLAN false
