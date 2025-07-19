@@ -1,0 +1,24 @@
+" jjでインサートモードを抜ける
+inoremap jj <Esc>
+
+" リーダーキーをスペースに設定
+let mapleader = " "
+
+" <leader>eでプロジェクトビューを開く
+nnoremap <leader>e :action ActivateProjectToolWindow<CR>
+
+" プロジェクトビューでのキーマッピング
+nnoremap <silent> <leader>j :action Tree-selectNext<CR>
+nnoremap <silent> <leader>k :action Tree-selectPrevious<CR>
+nnoremap <silent> <leader>l :action Tree-expand<CR>
+nnoremap <silent> <leader>h :action Tree-collapse<CR>
+
+
+" 相対行番号を有効にする
+set relativenumber
+
+" クリップボードを有効にする
+set clipboard=unnamed
+
+" Neovimのキーマップを反映させるには、lua/config/keymaps.lua の設定を
+" このファイルにVim script形式で記述していく必要があります。
