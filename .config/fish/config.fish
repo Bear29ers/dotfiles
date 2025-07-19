@@ -14,6 +14,7 @@ alias vi nvim
 alias ws 'open -a webstorm'
 alias dd 'open -a docker'
 alias c clear
+alias now 'date "+%Y-%m-%d %H:%M:%S"'
 
 # Docker Aliases
 source ~/.config/fish/docker.fish
