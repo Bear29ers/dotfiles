@@ -40,7 +40,6 @@ cask "kindle"
 cask "astro-command-center"
 
 mas "LINE", id: 539883307
-mas "Messenger", id: 1480068668
 mas "The Unarchiver", id: 425424353
 
 tap "homebrew/cask-fonts"
