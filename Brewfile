@@ -1,7 +1,5 @@
 cask_args appdir: "/Applications"
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 tap "homebrew/cask-drivers"
 
 brew "fish"
@@ -30,7 +28,7 @@ cask "zoom"
 cask "iterm2"
 cask "webstorm"
 cask "visual-studio-code"
-cask "docker"
+cask "docker-desktop"
 cask "postman"
 cask "karabiner-elements"
 cask "clipy"
@@ -40,7 +38,6 @@ cask "kindle"
 cask "astro-command-center"
 
 mas "LINE", id: 539883307
-mas "Messenger", id: 1480068668
 mas "The Unarchiver", id: 425424353
 
 tap "homebrew/cask-fonts"
