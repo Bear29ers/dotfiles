@@ -54,3 +54,7 @@ set -x RUBY_LSP_PATH $HOME/.rbenv/shims/ruby-lsp
 
 # copilot paid plan
 set -gx COPILOT_PAID_PLAN false
+
+# Claude Code
+# Suppress background model calls that aren't critiacal to your task
+set -gx DISABLE_NON_ESSENTIAL_MODEL_CALLS 1
