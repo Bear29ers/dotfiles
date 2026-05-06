@@ -16,11 +16,4 @@ return {
       opts.presets.lsp_doc_border = true
     end,
   },
-  --notify
-  {
-    "rcarriga/nvim-notify",
-    opts = {
-      timeout = 10000,
-    },
-  },
 }
