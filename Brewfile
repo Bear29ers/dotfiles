@@ -1,9 +1,8 @@
 cask_args appdir: "/Applications"
-tap "homebrew/bundle"
-tap "homebrew/cask-drivers"
 
 brew "fish"
 brew "git"
+brew "gh"
 brew "lazygit"
 brew "neovim"
 brew "tmux"
@@ -14,12 +13,9 @@ brew "peco"
 brew "ghq"
 brew "curl"
 brew "wget"
-brew "reattach-to-user-namespace"
 brew "tree-sitter"
 brew "ripgrep"
 brew "fd"
-brew "ninja"
-brew "lua-language-server"
 
 cask "google-chrome"
 cask "firefox"
@@ -40,5 +36,4 @@ cask "astro-command-center"
 mas "LINE", id: 539883307
 mas "The Unarchiver", id: 425424353
 
-tap "homebrew/cask-fonts"
 cask "font-hack-nerd-font"
