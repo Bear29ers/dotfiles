@@ -7,11 +7,9 @@ return {
         "stylua",
         "shfmt",
         "tailwindcss-language-server",
-        "typescript-language-server",
         "html-lsp",
         "css-lsp",
         "cssmodules-language-server",
-        "vue-language-server",
         "emmet-language-server",
         "sqlls",
       })
