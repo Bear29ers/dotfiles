@@ -10,13 +10,23 @@
 
 [color]
   ui = auto
-  status = auto
-  branch = auto
-  diff = auto
-  interactive = auto
-  grep = auto
 
-[alias] 
+[pull]
+  rebase = true
+
+[push]
+  autoSetupRemote = true
+
+[rebase]
+  autoStash = true
+
+[merge]
+  conflictStyle = zdiff3
+
+[rerere]
+  enabled = true
+
+[alias]
   a = add
   d = diff
   co = checkout
@@ -31,18 +41,15 @@
   ba = branch -a
   bm = branch --merged
   bn = branch --no-merged
-  brdl = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|main'|xargs git branch -d; };f"
+  brdl = "!f () { git checkout $1; git branch --merged|grep -Ev '\\*|develop|main'|xargs git branch -d; };f"
   lo = log --oneline
   hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
   llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
-  open = "!hub browse"
+  open = "!gh repo view --web"
   type = cat-file -t
   dump = cat-file -p
   cache = rm -r --cached . -f
   find = "!f() { git log --pretty=format:\"%h %cd [%cn] %s%d\" --date=relative -S'pretty' -S\"$@\" | peco | awk '{print $1}' | xargs -I {} git diff {}^ {}; }; f"
-
-[hub]
-  protocol = https
 
 [github]
   user = bear29ers
@@ -56,7 +63,7 @@
 
 [mergetool "nvimdiff"]
   cmd = nvim -d \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  trustExitCode = true
 
 [filter "lfs"]
   clean = git-lfs clean -- %f
@@ -68,6 +75,6 @@
   root = ~/.ghq
 
 [init]
-  defaultBranch = master
+  defaultBranch = main
 [credential]
-	helper = store
+  helper = osxkeychain
