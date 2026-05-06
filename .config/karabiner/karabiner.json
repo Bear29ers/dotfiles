@@ -46,57 +46,6 @@
                 {
                     "identifiers": {
                         "is_keyboard": true,
-                        "product_id": 834,
-                        "vendor_id": 1452
-                    },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "caps_lock" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "right_control" },
-                            "to": [{ "key_code": "caps_lock" }]
-                        }
-                    ]
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 591,
-                        "vendor_id": 1452
-                    },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "caps_lock" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "right_control" },
-                            "to": [{ "key_code": "caps_lock" }]
-                        }
-                    ]
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 785,
-                        "vendor_id": 13364
-                    },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "caps_lock" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "right_control" },
-                            "to": [{ "key_code": "caps_lock" }]
-                        }
-                    ]
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
                         "is_pointing_device": true,
                         "vendor_id": 2007
                     },
