@@ -12,11 +12,47 @@
 
 This dotfiles contains a variety of setting files.
 
-- Fish Shell config
-- tmux config
-- git config
-- Karabiner config
+- Fish Shell config (`.config/fish/`)
+- Neovim config (`.config/nvim/`)
+- tmux config (`.config/tmux/`)
+- git config (`.gitconfig`)
+- Karabiner config (`.config/karabiner/`)
+- VSCode settings (`.config/vscode/`)
+- JetBrains / IdeaVim (`.ideavimrc`)
+- lazygit config (`lazygit/`)
+- commitizen / cz-emoji (`.czrc`)
 - Brewfile
+  <br>
+
+## Setup
+
+Clone and symlink each config to its expected location:
+
+| Source (in this repo)              | Target                                                          |
+| ---------------------------------- | --------------------------------------------------------------- |
+| `.config/fish/`                    | `~/.config/fish/`                                               |
+| `.config/nvim/`                    | `~/.config/nvim/`                                               |
+| `.config/tmux/`                    | `~/.config/tmux/`                                               |
+| `.config/karabiner/karabiner.json` | `~/.config/karabiner/karabiner.json`                            |
+| `.config/vscode/settings.json`     | `~/Library/Application Support/Code/User/settings.json`         |
+| `lazygit/config.yml`               | `~/Library/Application Support/lazygit/config.yml`              |
+| `.gitconfig`                       | `~/.gitconfig`                                                  |
+| `.gitignore`                       | `~/.gitignore`                                                  |
+| `.czrc`                            | `~/.czrc`                                                       |
+| `.ideavimrc`                       | `~/.ideavimrc`                                                  |
+
+**Prerequisites:**
+
+```sh
+# Install Homebrew dependencies
+brew bundle
+
+# Install commitizen (required for lazygit git cz command)
+npm i -g commitizen cz-emoji
+
+# Install Fish plugins
+fisher update
+```
   <br>
 
 ## Shell Settings
@@ -27,7 +63,7 @@ This dotfiles contains a variety of setting files.
 | [Fisher](https://github.com/jorgebucaran/fisher)         | A plugin manager for Fish—the friendly interactive shell.                                         |
 | [tmux](https://github.com/tmux/tmux)                     | tmux is terminal multiplexer.                                                                     |
 | [z](https://github.com/jethrokuan/z)                     | z is a port of z for the fish shell                                                               |
-| [exa](https://the.exa.website/)                          | A modern replacement for ls.                                                                      |
+| [eza](https://github.com/eza-community/eza)               | A modern replacement for ls.                                                                      |
 | [peco](https://github.com/peco/peco)                     | Simplistic interactive filtering tool                                                             |
 | [ghq](https://github.com/x-motemen/ghq)                  | 'ghq' provides a way to organize remote repository clones, like go get does.                      |
 | [Tide](https://github.com/IlanCosman/tide)               | The ultimate Fish prompt.                                                                         |
