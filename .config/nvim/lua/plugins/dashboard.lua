@@ -1,8 +1,4 @@
-return {
-  "goolord/alpha-nvim",
-  opts = function(_, opts)
-    local dashboard = require("alpha.themes.dashboard")
-    local logo = [[
+local logo = [[
                         ██████        ██████████          ██████                        
                       ████████████████          ██████████████████                      
                     ████████████                        ████████████                    
@@ -27,20 +23,33 @@ return {
                                   ████████████████████                                  
                                   ██████        ██████                                  
                                     ████        ████                                    
+                                                                                        
+                                      [bear29ers]                                       
+]]
 
-                                      [bear29ers]
-    ]]
-    opts.section.header.val = vim.split(logo, "\n", { trimempty = true })
-    dashboard.section.buttons.val = {
-      dashboard.button("f", " " .. " Find file", "<cmd> Telescope find_files <cr>"),
-      dashboard.button("n", " " .. " New file", "<cmd> ene <BAR> startinsert <cr>"),
-      dashboard.button("r", " " .. " Recent files", "<cmd> Telescope oldfiles <cr>"),
-      dashboard.button("g", " " .. " Find text", "<cmd> Telescope live_grep <cr>"),
-      dashboard.button("c", " " .. " Config", "<cmd> lua require('lazyvim.util').telescope.config_files()() <cr>"),
-      dashboard.button("s", " " .. " Restore Session", [[<cmd> lua require("persistence").load() <cr>]]),
-      dashboard.button("x", " " .. " Lazy Extras", "<cmd> LazyExtras <cr>"),
-      dashboard.button("l", "󰒲 " .. " Lazy", "<cmd> Lazy <cr>"),
-      dashboard.button("q", " " .. " Quit", "<cmd> qa <cr>"),
-    }
-  end,
+return {
+  "folke/snacks.nvim",
+  opts = {
+    dashboard = {
+      preset = {
+        header = logo,
+        keys = {
+          { icon = " ", key = "f", desc = "Find file", action = ":lua Snacks.dashboard.pick('files')" },
+          { icon = " ", key = "n", desc = "New file", action = ":ene | startinsert" },
+          { icon = " ", key = "r", desc = "Recent files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+          { icon = " ", key = "g", desc = "Find text", action = ":lua Snacks.dashboard.pick('live_grep')" },
+          {
+            icon = " ",
+            key = "c",
+            desc = "Config",
+            action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})",
+          },
+          { icon = " ", key = "s", desc = "Restore Session", section = "session" },
+          { icon = " ", key = "x", desc = "Lazy Extras", action = ":LazyExtras" },
+          { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
+          { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+        },
+      },
+    },
+  },
 }

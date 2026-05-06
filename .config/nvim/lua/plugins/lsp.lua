@@ -7,13 +7,13 @@ return {
         "stylua",
         "shfmt",
         "tailwindcss-language-server",
-        "typescript-language-server",
         "html-lsp",
         "css-lsp",
         "cssmodules-language-server",
-        "vue-language-server",
         "emmet-language-server",
         "sqlls",
+        "some-sass-language-server",
+        "stylelint-lsp",
       })
     end,
   },
@@ -35,23 +35,25 @@ return {
             },
           },
         },
-        ruby_lsp = {
-          mason = false,
-          enabled = true,
-          cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv("GLLBAL_GEMFILE") },
-          cmd = { os.getenv("RUBY_LSP_PATH") or vim.fn.expand("~/.rbenv/shims/ruby-lsp") },
-          filetypes = { "ruby", "eruby" },
-          root_dir = function()
-            return vim.loop.cwd()
-          end,
+        somesass_ls = {
+          filetypes = { "scss", "sass", "css" },
+        },
+        stylelint_lsp = {
+          filetypes = { "css", "scss", "less", "sass" },
+          settings = {
+            stylelintplus = {
+              autoFixOnSave = true,
+              autoFixOnFormat = true,
+            },
+          },
         },
       },
       setup = {
         eslint = function()
-          Snacks.util.lsp.on(function(buf, client)
+          Snacks.util.lsp.on(function(_, client)
             if client.name == "eslint" then
               client.server_capabilities.documentFormattingProvider = true
-            elseif client.name == "tsserver" or client.name == "vtsls" then
+            elseif client.name == "ts_ls" or client.name == "vtsls" then
               client.server_capabilities.documentFormattingProvider = false
             end
           end)
@@ -67,27 +69,5 @@ return {
         tailwind = true,
       },
     },
-  },
-  -- nvim-cmp
-  {
-    "hrsh7th/nvim-cmp",
-    dependencies = {
-      { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
-    },
-    opts = function(_, opts)
-      -- original LazyVim kind icon formatter
-      local format_kinds = opts.formatting.format
-      opts.formatting.format = function(entry, item)
-        format_kinds(entry, item) -- add icons
-        return require("tailwindcss-colorizer-cmp").formatter(entry, item)
-      end
-      local cmp = require("cmp")
-      -- borders to cmp window
-      local cmp_window = cmp.config.window
-      opts.window = {
-        completion = cmp_window.bordered(),
-        documentation = cmp_window.bordered(),
-      }
-    end,
   },
 }

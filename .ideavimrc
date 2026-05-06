@@ -14,6 +14,10 @@ nnoremap <silent> <leader>l :action Tree-expand<CR>
 nnoremap <silent> <leader>h :action Tree-collapse<CR>
 
 
+" H/Lで前後タブ移動 (VSCodeのH/Lキーバインドに合わせる)
+nnoremap H :action PreviousTab<CR>
+nnoremap L :action NextTab<CR>
+
 " 相対行番号を有効にする
 set relativenumber
 
