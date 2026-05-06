@@ -46,7 +46,7 @@ return {
       },
       setup = {
         eslint = function()
-          Snacks.util.lsp.on(function(buf, client)
+          Snacks.util.lsp.on(function(_, client)
             if client.name == "eslint" then
               client.server_capabilities.documentFormattingProvider = true
             elseif client.name == "ts_ls" or client.name == "vtsls" then
