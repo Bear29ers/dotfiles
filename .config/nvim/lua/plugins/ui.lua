@@ -12,11 +12,6 @@ return {
         },
         opts = { skip = true },
       })
-      -- treesitter parser drift: "Invalid node type" on cmdline highlight
-      table.insert(opts.routes, {
-        filter = { event = "notify", find = "Invalid node type" },
-        opts = { skip = true },
-      })
       -- display lsp doc border
       opts.presets.lsp_doc_border = true
     end,
