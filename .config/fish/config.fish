@@ -1,13 +1,14 @@
-# Color
+# ===== Color / TERM =====
 set -gx TERM xterm-256color
 
-# Theme
-set -g fish_prompt_pwd_dir_length 1
-set -g theme_display_user yes
-set -g theme_hide_hostname no
-set -g theme_hostname always
+# ===== Editor =====
+set -gx EDITOR nvim
 
-# Aliases
+# ===== PATH =====
+set -gx PATH /opt/homebrew/bin $PATH
+set -gx PATH $HOME/bin $HOME/.local/bin $PATH
+
+# ===== Aliases =====
 alias g git
 command -qv nvim && alias vim nvim
 alias vi nvim
@@ -16,25 +17,7 @@ alias dd 'open -a docker'
 alias c clear
 alias now 'date "+%Y-%m-%d %H:%M:%S"'
 
-# Docker Aliases
-source ~/.config/fish/docker.fish
-
-# Editor
-set -gx EDITOR nvim
-
-# PATH
-set -gx PATH bin $PATH
-set -gx PATH ~/bin $PATH
-set -gx PATH ~/.local/bin $PATH
-
-# Homebrew
-set PATH /opt/homebrew/bin $PATH
-
-# anyenv
-set -x PATH $HOME/.anyenv/bin $PATH
-eval (anyenv init - | source)
-
-# exa
+# eza
 if type -q eza
     alias ll 'eza -l -g --icons'
     alias la 'll -a'
@@ -42,19 +25,19 @@ if type -q eza
     alias lat 'la --tree'
 end
 
-# rbenv
-set -Ux RBENV_ROOT $HOME/.rbenv
-set -U fish_user_paths $RBENV_ROOT/bin $fish_user_paths
+# Docker Aliases
+source ~/.config/fish/docker.fish
 
-# rbenv init
-status is-interactive; and source (rbenv init -|psub)
+# ===== anyenv =====
+set -gx PATH $HOME/.anyenv/bin $PATH
+if status is-interactive
+    anyenv init - | source
+end
 
-# ruby-lsp path
-set -x RUBY_LSP_PATH $HOME/.rbenv/shims/ruby-lsp
+# ===== rbenv =====
+set -gx RBENV_ROOT $HOME/.rbenv
+set -gx RUBY_LSP_PATH $HOME/.rbenv/shims/ruby-lsp
 
-# copilot paid plan
+# ===== Tools =====
 set -gx COPILOT_PAID_PLAN false
-
-# Claude Code
-# Suppress background model calls that aren't critiacal to your task
 set -gx DISABLE_NON_ESSENTIAL_MODEL_CALLS 1
