@@ -12,6 +12,8 @@ return {
         "cssmodules-language-server",
         "emmet-language-server",
         "sqlls",
+        "some-sass-language-server",
+        "stylelint-lsp",
       })
     end,
   },
@@ -33,15 +35,17 @@ return {
             },
           },
         },
-        ruby_lsp = {
-          mason = false,
-          enabled = true,
-          cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv("GLOBAL_GEMFILE") },
-          cmd = { os.getenv("RUBY_LSP_PATH") or vim.fn.expand("~/.rbenv/shims/ruby-lsp") },
-          filetypes = { "ruby", "eruby" },
-          root_dir = function()
-            return vim.uv.cwd()
-          end,
+        somesass_ls = {
+          filetypes = { "scss", "sass", "css" },
+        },
+        stylelint_lsp = {
+          filetypes = { "css", "scss", "less", "sass" },
+          settings = {
+            stylelintplus = {
+              autoFixOnSave = true,
+              autoFixOnFormat = true,
+            },
+          },
         },
       },
       setup = {

@@ -57,7 +57,7 @@ LazyVim-based configuration. Entry point is `init.lua` which bootstraps `lazy.nv
 - `lua/config/` — Core overrides: `lazy.lua` (plugin manager setup), `keymaps.lua`, `options.lua`, `autocmds.lua`
 - `lua/plugins/` — Individual plugin config files, one per concern (lsp.lua, telescope.lua, copilot.lua, etc.)
 
-LSP is configured in `lua/plugins/lsp.lua` with mason-org/mason.nvim. Ruby LSP uses rbenv shims (`~/.rbenv/shims/ruby-lsp`). Language extras enabled: TypeScript, Tailwind, Vue, JSON, Ruby, Markdown, Docker, Git, YAML.
+LSP is configured in `lua/plugins/lsp.lua` with mason-org/mason.nvim. Language extras enabled: TypeScript, Tailwind, Vue, JSON, Markdown, Docker, Git, YAML.
 
 When adding a new plugin, create a new file under `lua/plugins/` following LazyVim's plugin spec format.
 
