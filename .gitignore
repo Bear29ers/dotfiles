@@ -28,3 +28,22 @@ fishd.*
 
 # Brewfile
 Brewfile.lock.json
+
+# Claude Code — track only the portable parts
+.claude/backups/
+.claude/cache/
+.claude/file-history/
+.claude/history.jsonl
+.claude/ide/
+.claude/paste-cache/
+.claude/plans/
+.claude/projects/
+.claude/session-env/
+.claude/sessions/
+.claude/shell-snapshots/
+.claude/stats-cache.json
+.claude/tasks/
+.claude/telemetry/
+.claude/plugins/
+.claude/memory/
+.claude/settings.local.json
