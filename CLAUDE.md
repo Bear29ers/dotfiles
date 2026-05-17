@@ -32,6 +32,10 @@ There are no build scripts — changes take effect by symlinking files to their 
 | `.config/vscode/settings.json`     | `~/Library/Application Support/Code/User/settings.json` |
 | `lazygit/config.yml`               | `~/Library/Application Support/lazygit/config.yml`      |
 | `.gitconfig`, `.gitignore`, `.czrc`, `.ideavimrc` | `~/`                                    |
+| `.claude/CLAUDE.md`                               | `~/.claude/CLAUDE.md`                   |
+| `.claude/settings.json`                           | `~/.claude/settings.json`               |
+| `.claude/statusline.sh`                           | `~/.claude/statusline.sh`               |
+| `.claude/commands/`                               | `~/.claude/commands/`                   |
 
 **Prerequisites (beyond Homebrew):** `npm i -g commitizen cz-emoji` (required for `git cz` in lazygit).
 

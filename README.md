@@ -21,6 +21,7 @@ This dotfiles contains a variety of setting files.
 - JetBrains / IdeaVim (`.ideavimrc`)
 - lazygit config (`lazygit/`)
 - commitizen / cz-emoji (`.czrc`)
+- Claude Code settings (`.claude/`)
 - Brewfile
   <br>
 
@@ -40,6 +41,10 @@ Clone and symlink each config to its expected location:
 | `.gitignore`                       | `~/.gitignore`                                                  |
 | `.czrc`                            | `~/.czrc`                                                       |
 | `.ideavimrc`                       | `~/.ideavimrc`                                                  |
+| `.claude/CLAUDE.md`                | `~/.claude/CLAUDE.md`                                           |
+| `.claude/settings.json`            | `~/.claude/settings.json`                                       |
+| `.claude/statusline.sh`            | `~/.claude/statusline.sh`                                       |
+| `.claude/commands/`                | `~/.claude/commands/`                                           |
 
 **Prerequisites:**
 
@@ -53,6 +58,44 @@ npm i -g commitizen cz-emoji
 # Install Fish plugins
 fisher update
 ```
+  <br>
+
+## Claude Code Settings
+
+Portable Claude Code config (global instructions, permissions, statusline, slash commands) is managed under `.claude/` in this repo.
+
+**What is tracked:**
+
+| File / Dir              | Purpose                                          |
+| ----------------------- | ------------------------------------------------ |
+| `.claude/CLAUDE.md`     | Global instructions (commit convention, tests)  |
+| `.claude/settings.json` | Permissions, model, statusline, theme           |
+| `.claude/statusline.sh` | Custom statusline script (requires `+x`)        |
+| `.claude/commands/`     | Custom slash commands (e.g. `/handover`)        |
+
+Machine-local state (`sessions/`, `history.jsonl`, `memory/`, `plans/`, `plugins/`, etc.) is excluded via `.gitignore`.
+
+**Setup on a new machine (run from the dotfiles root):**
+
+```sh
+mkdir -p ~/.claude
+
+# Back up any files Claude Code created on first launch
+[ -e ~/.claude/CLAUDE.md ]     && mv ~/.claude/CLAUDE.md     ~/.claude/CLAUDE.md.bak
+[ -e ~/.claude/settings.json ] && mv ~/.claude/settings.json ~/.claude/settings.json.bak
+[ -e ~/.claude/statusline.sh ] && mv ~/.claude/statusline.sh ~/.claude/statusline.sh.bak
+[ -e ~/.claude/commands ]      && mv ~/.claude/commands      ~/.claude/commands.bak
+
+# Symlink from this repo
+ln -sf "$PWD/.claude/CLAUDE.md"     ~/.claude/CLAUDE.md
+ln -sf "$PWD/.claude/settings.json" ~/.claude/settings.json
+ln -sf "$PWD/.claude/statusline.sh" ~/.claude/statusline.sh
+ln -sfn "$PWD/.claude/commands"     ~/.claude/commands
+
+chmod +x ~/.claude/statusline.sh
+```
+
+> **Note:** `jq` must be installed (`brew install jq`) for `statusline.sh` to work.
   <br>
 
 ## Shell Settings
