@@ -13,7 +13,6 @@ return {
         "emmet-language-server",
         "sqlls",
         "some-sass-language-server",
-        "stylelint-lsp",
       })
     end,
   },
