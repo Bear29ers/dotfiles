@@ -10,7 +10,7 @@
 --   <leader>pp  — toggle Copilot CLI panel
 --   <leader>pf  — focus Copilot CLI panel (show without toggle-close)
 
-local CMD = "copilot --experimental"
+local CMD = "headroom wrap copilot --subscription -- --experimental --model claude-sonnet-4-6"
 local WIN = { position = "right", width = 0.45 }
 
 return {
