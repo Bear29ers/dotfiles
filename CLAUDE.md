@@ -41,7 +41,7 @@ There are no build scripts — changes take effect by symlinking files to their 
 
 **Prerequisites (beyond Homebrew):**
 - `npm i -g commitizen cz-emoji` — required for `git cz` in lazygit
-- `npm i -g @github/copilot` — Copilot CLI (for `<leader>pp` in nvim)
+- `brew install --cask copilot-cli` — Copilot CLI (for `<leader>pp` in nvim)
 - `headroom copilot-auth login` — one-time Headroom ↔ Copilot OAuth (headroom-ai itself is installed as an MCP server for Claude Code)
 - `brew install jq` — required by `.copilot/statusline.sh` for token display
 
