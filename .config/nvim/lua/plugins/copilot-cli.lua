@@ -10,7 +10,7 @@
 --   <leader>pp  — toggle Copilot CLI panel
 --   <leader>pf  — focus Copilot CLI panel (show without toggle-close)
 
-local CMD = "headroom wrap copilot --subscription -- --experimental --model gpt-4o"
+local CMD = "copilot --experimental"
 local WIN = { position = "right", width = 0.45 }
 
 return {
