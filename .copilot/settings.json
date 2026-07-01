@@ -1,4 +1,5 @@
 {
+  "theme": "dark",
   "feature_flags": {
     "enabled": ["STATUS_LINE"]
   },
@@ -6,5 +7,6 @@
     "type": "command",
     "command": "~/.copilot/statusline.sh",
     "padding": 1
-  }
+  },
+  "experimental": true
 }
