@@ -102,3 +102,5 @@ Max subject length: 72 characters. Pick the emoji code that best matches the cha
 
 - At the start of each session, check the `.claude/handovers/` directory in the project root and read the latest file if one exists
 - At the end of a session or at a natural stopping point, prompt the user to run `/handover`
+
+@RTK.md
