@@ -9,6 +9,9 @@ Personal dotfiles for macOS managed by [Bear29ers](https://github.com/Bear29ers)
 ## Common Commands
 
 ```sh
+# Symlink all configs to their target locations (idempotent; backs up to .bak)
+./install.sh
+
 # Install all Homebrew dependencies
 brew bundle
 
@@ -19,7 +22,7 @@ fisher update
 :Lazy sync
 ```
 
-There are no build scripts — changes take effect by symlinking files to their target locations or restarting the relevant tool.
+There are no build scripts — changes take effect by symlinking files to their target locations (run `./install.sh`) or restarting the relevant tool.
 
 ### Symlink Targets
 
@@ -28,16 +31,20 @@ There are no build scripts — changes take effect by symlinking files to their 
 | `.config/fish/`                    | `~/.config/fish/`                                       |
 | `.config/nvim/`                    | `~/.config/nvim/`                                       |
 | `.config/tmux/`                    | `~/.config/tmux/`                                       |
-| `.config/karabiner/karabiner.json` | `~/.config/karabiner/karabiner.json`                    |
 | `.config/vscode/settings.json`     | `~/Library/Application Support/Code/User/settings.json` |
 | `lazygit/config.yml`               | `~/Library/Application Support/lazygit/config.yml`      |
 | `.gitconfig`, `.gitignore`, `.czrc`, `.ideavimrc` | `~/`                                    |
 | `.claude/CLAUDE.md`                               | `~/.claude/CLAUDE.md`                   |
 | `.claude/settings.json`                           | `~/.claude/settings.json`               |
 | `.claude/statusline.sh`                           | `~/.claude/statusline.sh`               |
-| `.claude/commands/`                               | `~/.claude/commands/`                   |
+| `.claude/skills/`                                 | `~/.claude/skills/`                     |
+| `.claude/agents/`                                 | `~/.claude/agents/`                     |
+| `.claude/hooks/`                                  | `~/.claude/hooks/`                      |
+| `.claude/references/`                             | `~/.claude/references/`                 |
 | `.copilot/settings.json`                          | `~/.copilot/settings.json`              |
 | `.copilot/statusline.sh`                          | `~/.copilot/statusline.sh`              |
+
+**Exception**: `.config/karabiner/karabiner.json` is **copied**, not symlinked — Karabiner-Elements rewrites the real file and would clobber a symlink. Sync changes back into the repo manually.
 
 **Prerequisites (beyond Homebrew):**
 - `npm i -g commitizen cz-emoji` — required for `git cz` in lazygit
