@@ -68,6 +68,9 @@
       "Bash(git merge *)",
       "Bash(git * merge *)",
       "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(pnpm dlx *)",
+      "Bash(docker *)",
       "Bash(git commit *)",
       "Bash(git * commit *)",
       "Bash(git push *)",
@@ -77,6 +80,8 @@
     "defaultMode": "acceptEdits"
   },
   "model": "opusplan",
+  "autoCompactEnabled": true,
+  "cleanupPeriodDays": 30,
   "hooks": {
     "PreToolUse": [
       {
@@ -84,7 +89,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "rtk hook claude"
+            "command": "~/.claude/hooks/validate-commit-msg.sh"
           }
         ]
       }
