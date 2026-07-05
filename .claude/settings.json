@@ -1,4 +1,5 @@
 {
+  "cleanupPeriodDays": 30,
   "permissions": {
     "allow": [
       "Bash(mkdir *)",
@@ -79,9 +80,7 @@
     ],
     "defaultMode": "acceptEdits"
   },
-  "model": "opusplan",
-  "autoCompactEnabled": true,
-  "cleanupPeriodDays": 30,
+  "model": "claude-fable-5[1m]",
   "hooks": {
     "PreToolUse": [
       {
@@ -107,5 +106,6 @@
   "effortLevel": "medium",
   "advisorModel": "claude-opus-4-7",
   "tui": "fullscreen",
-  "theme": "dark-ansi"
+  "theme": "dark-ansi",
+  "autoCompactEnabled": true
 }
