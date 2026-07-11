@@ -11,10 +11,8 @@ command -v jq >/dev/null 2>&1 || exit 0
 
 cmd=$(printf '%s' "$input" | jq -r '.tool_input.command // empty')
 
-case "$cmd" in
-  *git\ commit*) ;;
-  *) exit 0 ;;
-esac
+# Match `git commit` even with intervening global options (e.g. `git -C <path> commit`)
+printf '%s' "$cmd" | grep -qE '(^|[;&|[:space:]])git[[:space:]]+([^;&|]*[[:space:]])?commit([[:space:]]|$)' || exit 0
 
 # No inline message (e.g. --amend --no-edit, or editor-based) -> nothing to check
 case "$cmd" in
