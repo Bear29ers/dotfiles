@@ -20,6 +20,12 @@ fisher update
 
 # Apply Neovim plugin changes (runs inside nvim)
 :Lazy sync
+
+# Capture current WebStorm settings into the repo (WebStorm must be quit)
+./webstorm/sync.sh pull
+
+# Check whether the repo and live WebStorm settings have drifted
+./webstorm/sync.sh diff
 ```
 
 There are no build scripts — changes take effect by symlinking files to their target locations (run `./install.sh`) or restarting the relevant tool.
@@ -45,6 +51,8 @@ There are no build scripts — changes take effect by symlinking files to their 
 | `.copilot/statusline.sh`                          | `~/.copilot/statusline.sh`              |
 
 **Exception**: `.config/karabiner/karabiner.json` is **copied**, not symlinked — Karabiner-Elements rewrites the real file and would clobber a symlink. Sync changes back into the repo manually.
+
+**Exception**: `webstorm/` (theme, code style, keymaps, color schemes, plugin list) is **copied**, not symlinked, via `./webstorm/sync.sh` (`pull` / `push` / `diff`) — WebStorm's config dir is version-numbered (`~/Library/Application Support/JetBrains/WebStorm<version>/`, auto-detected by the script) and it rewrites `options/*.xml` on exit, so every subcommand requires WebStorm to be fully quit first. License files and machine-local churn (recent projects, window state, telemetry) are deliberately excluded — see `webstorm/sync.sh` for the full allowlist.
 
 **Prerequisites (beyond Homebrew):**
 - `npm i -g commitizen cz-emoji` — required for `git cz` in lazygit
@@ -93,3 +101,5 @@ Based on [gpakosz/.tmux](https://github.com/gpakosz/.tmux). `.tmux.conf` is the 
 ### VS Code / JetBrains
 
 VS Code settings in `.config/vscode/settings.json` — vscode-neovim extension configured with `jj` escape. JetBrains Vim emulation in `.ideavimrc` with matching leader key (`space`) and `jj` escape.
+
+WebStorm settings live in `webstorm/` and are synced via `./webstorm/sync.sh`, not symlinked (see the Symlink Targets exception above). Tracked: a subset of `options/*.xml` (theme, editor, terminal, debugger, vim emulation, etc.), `codestyles/Default.xml`, `keymaps/`, `colors/*.icls`, and a derived `plugins.txt` for manual reinstall. Excluded: license files (`webstorm.key`, `plugin_PCWMP.license`), `recentProjects.xml`, window geometry, usage statistics, and AI/Grazie state. Keymap selection (`macOS copy`) and plugin installation cannot be scripted — see `webstorm/sync.sh push`'s post-run checklist.

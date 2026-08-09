@@ -75,5 +75,8 @@ link .claude/references     "$HOME/.claude/references"
 link .copilot/settings.json  "$HOME/.copilot/settings.json"
 link .copilot/statusline.sh  "$HOME/.copilot/statusline.sh"
 
+# --- WebStorm (manual sync) --------------------------------------------------
+echo "SKIP    WebStorm settings (run ./webstorm/sync.sh push with WebStorm quit)"
+
 echo
 echo "Done. Review any BACKUP lines above; remove the .bak files once verified."

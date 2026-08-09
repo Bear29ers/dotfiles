@@ -104,7 +104,7 @@
     "pr-review-toolkit@claude-plugins-official": true
   },
   "effortLevel": "medium",
-  "advisorModel": "claude-opus-4-7",
+  "advisorModel": "opus",
   "tui": "fullscreen",
   "theme": "dark-ansi",
   "autoCompactEnabled": true

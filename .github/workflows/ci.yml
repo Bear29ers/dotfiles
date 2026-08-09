@@ -24,3 +24,4 @@ jobs:
           bash -n install.sh
           bash -n .claude/hooks/*.sh
           bash -n .claude/statusline.sh
+          bash -n webstorm/sync.sh
