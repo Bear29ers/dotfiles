@@ -18,7 +18,7 @@ This dotfiles contains a variety of setting files.
 - git config (`.gitconfig`)
 - Karabiner config (`.config/karabiner/`)
 - VSCode settings (`.config/vscode/`)
-- JetBrains / IdeaVim (`.ideavimrc`)
+- JetBrains WebStorm / IdeaVim (`webstorm/`, `.ideavimrc`)
 - lazygit config (`lazygit/`)
 - commitizen / cz-emoji (`.czrc`)
 - Claude Code settings (`.claude/`)
@@ -96,6 +96,36 @@ chmod +x ~/.claude/statusline.sh
 ```
 
 > **Note:** `jq` must be installed (`brew install jq`) for `statusline.sh` to work.
+  <br>
+
+## WebStorm Settings
+
+WebStorm's config dir is version-numbered (`~/Library/Application Support/JetBrains/WebStorm<version>/`) and the IDE rewrites its settings files on exit, so unlike everything else in this repo, WebStorm settings are **copied**, not symlinked, via `webstorm/sync.sh`.
+
+**What is tracked:**
+
+| File / Dir              | Purpose                                          |
+| ------------------------ | ------------------------------------------------ |
+| `webstorm/options/*.xml` | Theme, editor, terminal, debugger, vim emulation, etc. (explicit allowlist) |
+| `webstorm/codestyles/`   | JS/TS code style (quotes, indent, line width)    |
+| `webstorm/keymaps/`      | Custom keymap (`macOS copy`)                     |
+| `webstorm/colors/`       | Custom `.icls` color schemes                     |
+| `webstorm/plugins.txt`   | Derived list of non-bundled plugins, for manual reinstall |
+
+**What is deliberately excluded:** license files (`webstorm.key`, `plugin_PCWMP.license`), `recentProjects.xml`, window geometry/layout, usage statistics, and AI/Grazie state — see the allowlist in `webstorm/sync.sh` for the full rationale.
+
+**Setup on a new machine:**
+
+1. `brew bundle` (installs the `webstorm` cask)
+2. `./install.sh`
+3. Launch WebStorm once, complete initial setup, then **quit it completely** (⌘Q — it rewrites settings on exit)
+4. `./webstorm/sync.sh push`
+5. Relaunch WebStorm, then finish manually (cannot be scripted):
+   - `Settings → Keymap` → select **macOS copy**
+   - `Settings → Plugins → Marketplace` → install everything listed in `webstorm/plugins.txt`, restart
+   - Verify theme is One Dark Vivid and code style is 2-space / single quotes
+
+To capture changes made on this machine back into the repo: quit WebStorm, then run `./webstorm/sync.sh pull`.
   <br>
 
 ## Shell Settings

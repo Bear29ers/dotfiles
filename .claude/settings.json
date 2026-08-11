@@ -1,4 +1,5 @@
 {
+  "cleanupPeriodDays": 30,
   "permissions": {
     "allow": [
       "Bash(mkdir *)",
@@ -68,6 +69,9 @@
       "Bash(git merge *)",
       "Bash(git * merge *)",
       "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(pnpm dlx *)",
+      "Bash(docker *)",
       "Bash(git commit *)",
       "Bash(git * commit *)",
       "Bash(git push *)",
@@ -84,7 +88,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "rtk hook claude"
+            "command": "~/.claude/hooks/validate-commit-msg.sh"
           }
         ]
       }
@@ -100,7 +104,8 @@
     "pr-review-toolkit@claude-plugins-official": true
   },
   "effortLevel": "medium",
-  "advisorModel": "claude-opus-4-7",
+  "advisorModel": "opus",
   "tui": "fullscreen",
-  "theme": "dark-ansi"
+  "theme": "dark-ansi",
+  "autoCompactEnabled": true
 }

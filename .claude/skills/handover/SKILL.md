@@ -1,3 +1,8 @@
+---
+name: handover
+description: Generate a session handover note at the end of a session or at a natural stopping point, so the next session can pick up where this one left off.
+---
+
 # Generate Session Handover Note
 
 Generate a handover note at the end of a session or at a natural stopping point.

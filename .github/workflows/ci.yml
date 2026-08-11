@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  syntax-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install fish
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fish
+
+      - name: Syntax check fish files
+        run: find .config/fish -name '*.fish' -print0 | xargs -0 -n1 fish -n
+
+      - name: Syntax check shell scripts
+        run: |
+          bash -n install.sh
+          bash -n .claude/hooks/*.sh
+          bash -n .claude/statusline.sh
+          bash -n webstorm/sync.sh

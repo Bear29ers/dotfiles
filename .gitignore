@@ -26,6 +26,10 @@ fishd.*
 # Karabiner
 .config/karabiner/automatic_backups
 
+# WebStorm — never commit JetBrains license material
+webstorm/**/*.key
+webstorm/**/*.license
+
 # Brewfile
 Brewfile.lock.json
 
@@ -46,4 +50,5 @@ Brewfile.lock.json
 .claude/telemetry/
 .claude/plugins/
 .claude/memory/
+.claude/handovers/
 .claude/settings.local.json

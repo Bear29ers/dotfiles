@@ -37,5 +37,6 @@
             "before": ["L"],
             "commands": ["workbench.action.nextEditor"]
         }
-    ]
+    ],
+    "redhat.telemetry.enabled": true
 }

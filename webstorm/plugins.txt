@@ -1,0 +1,10 @@
+# Non-bundled WebStorm plugins, derived from the live install.
+# Format: <plugin-id>\t<display-name (search this in Marketplace)>
+# Regenerate with: ./webstorm/sync.sh plugins > webstorm/plugins.txt
+# Reinstall manually: Settings > Plugins > Marketplace (no CLI installer exists).
+IdeaVIM	IdeaVIM
+Key Promoter X	Key Promoter X
+com.mallowigi	Atom Material Icons
+com.markskelton.one-dark-theme	one-dark-theme
+indent-rainbow.indent-rainbow	Indent Rainbow
+izhangzhihao.rainbow.brackets	intellij-rainbow-brackets
