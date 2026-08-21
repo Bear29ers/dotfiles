@@ -16,6 +16,7 @@ brew "wget"
 brew "tree-sitter"
 brew "ripgrep"
 brew "fd"
+brew "chafa"
 
 cask "google-chrome"
 cask "firefox"
