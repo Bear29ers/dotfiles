@@ -42,6 +42,7 @@ return {
           width = 36,
           height = 20,
           padding = 1,
+          indent = 12,
         },
         { section = "header" },
         { section = "keys", gap = 1, padding = 1 },
