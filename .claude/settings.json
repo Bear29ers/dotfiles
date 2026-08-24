@@ -107,5 +107,6 @@
   "advisorModel": "opus",
   "tui": "fullscreen",
   "theme": "dark-ansi",
-  "autoCompactEnabled": true
+  "autoCompactEnabled": true,
+  "respectGitignore": false
 }
